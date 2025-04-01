@@ -2,11 +2,26 @@
   "name": "gemma",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@pixi/layout": "^2.0.1",
+    "bootstrap": "^5.3.3",
+    "html-webpack-plugin": "^5.6.3",
+    "markdown-it": "^14.1.0",
+    "ollama": "^0.5.14",
+    "pixi-viewport": "^6.0.3",
+    "pixi.js": "^8.8.1",
+    "source-map-loader": "^5.0.0",
+    "tailwindcss": "^4.0.14",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
 }
