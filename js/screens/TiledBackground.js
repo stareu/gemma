@@ -1,0 +1,26 @@
+import { Container, Texture, TilingSprite } from "pixi.js"
+import { pixiApp } from "../App.js"
+
+export class TiledBackground extends Container {
+	constructor() {
+		super()
+
+		this._sprite = new TilingSprite({
+			texture: Texture.from('background'),
+			width: pixiApp.screen.width,
+			height: pixiApp.screen.height
+		})
+
+		this.addChild(this._sprite)
+
+		this.onRender = ((a, b) => {
+			const delta = pixiApp.ticker.deltaTime
+
+			this._sprite.tilePosition.x -= 1 * delta
+			this._sprite.tilePosition.y -= 1 * delta
+			this._sprite.tileRotation = -Math.PI * 0.15
+		})
+	}
+
+	show() {}
+}

@@ -1,60 +1,75 @@
 import { Application, Sprite, Assets, Texture, Container, Spritesheet, Graphics, Color } from 'pixi.js'
 import anime from 'animejs'
 import { Layout } from '@pixi/layout'
+import { navigation } from './navigation.js'
+import { LoadScreen } from './screens/LoadScreen.js'
+import { TiledBackground } from './screens/TiledBackground.js'
 
-const APP_WIDTH =  1366
-const APP_HEIGHT = 768
+export const pixiApp = new Application()
 
 class App {
 	/** @type { Application } */
 	pixiApp
 
 	async init() {
-		const app = this.pixiApp = new Application()
+		await this._initPixiApp()
+		
+		this._initResize()
+
+		await this._initAssets()
+
+		await navigation.setBackground(TiledBackground)
+	}
+
+	async _initPixiApp() {
+		const app = this.pixiApp = pixiApp
 
 		await app.init({
-			width: APP_WIDTH,
-			height: APP_HEIGHT,
-			background: '#000',
-			resizeTo: window,
-			resolution: window.devicePixelRatio || 1,
+			resolution: 1,
+			backgroundColor: '#ccc'
 			// skipExtensionImports: true // кастомный импорт нужных модулей
 		})
 
 		document.body.appendChild(app.canvas)
-
-		await this._onInit()
-		this._initEvents()
 	}
-	
-	_initEvents() {
+
+	_initResize() {
 		const onResize = () => {
-			const innerWidth = window.innerWidth
-			const innerHeight = window.innerHeight
+			const app = this.pixiApp
+			const windowWidth = window.innerWidth;
+			const windowHeight = window.innerHeight;
+			const minWidth = 375;
+			const minHeight = 700;
 
-			this.myCont.setStyles({
-				width: innerWidth,
-				height: innerHeight
-			})
+			// Если не достигнуты миниальные значения, то и canvas и view будут иметь одинаковый размер
+			// Если width или height меньше минимальных, то будет scale renderer view (по высоте или ширине), а canvas всё так же растянется на весь экран
+			const scaleX = minWidth > windowWidth ? minWidth / windowWidth : 1;
+			const scaleY = minHeight > windowHeight ? minHeight / windowHeight : 1;
+			const scale = Math.max(scaleX, scaleY);
 
-			const gameArea = this.myCont.getChildByID('gameArea')
+			// Если экран больше минимальных значений, то всегда будет 1
+			// Если экран меньше, то width/height БУДУТ равны minWidth/minHeight
+			const width = windowWidth * scale;
+			const height = windowHeight * scale;
 
-			let gameScale
-			const heightScale = innerHeight / APP_HEIGHT
+			// canvas растянется до размеров width и height (то есть до минимального размера контейнера игры по ширине или высоте)
+			// То есть, если экран 400px, то canvas будет шириной minWidth, что выходит за рамки.
+			// Поэтому ещё ниже уменьшаем итоговое изображение через стили, чтобы вместить точно по ширине/высоте
+			app.renderer.resize(width, height)
 
-			if (innerWidth < APP_WIDTH * heightScale) {
-				gameScale = innerWidth / APP_WIDTH
-			}
-			else {
-				gameScale = heightScale
-			}
+			app.renderer.canvas.style.width = `${windowWidth}px`;
+			app.renderer.canvas.style.height = `${windowHeight}px`;
 
-			gameArea.setStyles({
-				scale: gameScale
-			})
+			window.scrollTo(0, 0)
 
-			this.myCont.resize(innerWidth, innerHeight)	
-			// this.myCont.refresh()
+			// TODO: выше для узких экранов сначала создаётся canvas бОльшего размера и уменьшается до размера экрана
+			// Якобы лучше, если всегда указывать width, height канваса по размеру экрана (не через style), а скейлить уже некий внутренний контейнер
+			// Попробовать потом сделать и сравнить
+
+			// todo: почему при изменении height спрайт смещается так, будто у него точка опоры снизу, а не 0,0
+			// app.renderer.resize(900, 900)
+			// app.canvas.width = 400
+			// app.canvas.height = 400
 		}
 
 		window.addEventListener('resize', onResize)
@@ -62,75 +77,16 @@ class App {
 		onResize()
 	}
 
-	async _onInit() {
-		await Assets.load([
-			'./img/home1.jpg',
-			'./img/sky.jpg'
-		])
+	async _initAssets() {
+		const response = await fetch('assets/assets-manifest.json')
+		const manifest = await response.json()
 
-		const sprite2 = Sprite.from('./img/home1.jpg')
-		const sprite = Sprite.from('./img/sky.jpg')
-		const gameArea = new Graphics()
-			.rect(0, 0, 400, 400)
-			.fill('rgba(255,255,255,.5)')
-
-		// const animation = anime({
-		// 	targets: sprite,
-		// 	x: 500,
-		// 	direction: 'alternate',
-		// 	easing: 'easeInOutQuad',
-		// 	loop: true,
-		// 	duration: 1e3,
-		// 	autoplay: false
-		// })
-
-		// this.pixiApp.ticker.add(ticker => {
-		// 	animation.tick(ticker.lastTime)
-		// })
-
-		const mycont = this.myCont = new Layout({
-			content: {
-				gameArea: {
-					content: {
-						bg: {
-							content: sprite2,
-							styles: {
-								maxWidth: 1920,
-								maxHeight: 1080,
-								position: 'center'
-							}
-						},
-						blocks: {
-							content: {
-								p1: {
-									content: new Container(),
-									styles: {
-										width: 2,
-										height: '100%',
-										background: Sprite.from(Texture.WHITE),
-										backgroundSize: 'stretch',
-										// overflow: 'hidden',
-									}
-								},
-							},
-							// styles: {
-							// 	// maxHeight: 200,
-							// 	// maxWidth: '100%',
-							// 	// position: 'leftBottom',
-							// }
-						}
-					},
-					styles: {
-						position: 'center',
-						width: APP_WIDTH,
-						height: APP_HEIGHT,
-						// overflow: 'hidden'
-					}
-				},
-			}
+		await Assets.init({
+			manifest,
+			basePath: 'assets'
 		})
-
-		this.pixiApp.stage.addChild(mycont)
+		
+		await Assets.loadBundle('preload')
 	}
 }
 

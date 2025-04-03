@@ -1,0 +1,4019 @@
+{
+    "assets": {
+        "C:/xampp/htdocs/gemma/raw-assets": {
+            "isFolder": true,
+            "metaData": {},
+            "inheritedMetaData": {},
+            "transformData": {},
+            "stats": {
+                "date": 1743704473790,
+                "duration": 4.713900000000024,
+                "success": true
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}": {
+            "isFolder": true,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets",
+            "metaData": {
+                "m": true
+            },
+            "inheritedMetaData": {},
+            "transformData": {},
+            "stats": {
+                "date": 1743704473790,
+                "duration": 4.501600000000053,
+                "success": true
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/bgm-game.mp3": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704473790,
+                "duration": 782.9418999999999,
+                "success": true
+            },
+            "hash": "IXGL8w"
+        },
+        ".assetpack/audio/common{m}/bgm-game.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/bgm-game.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/bgm-game-IXGL8w.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/bgm-game.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/bgm-game-IXGL8w.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/bgm-game-IXGL8w.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/common{m}/bgm-game.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/bgm-game.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/bgm-game-bIjetw.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/bgm-game.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/bgm-game-bIjetw.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/bgm-game-bIjetw.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/bgm-main.mp3": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704473791,
+                "duration": 738.3116,
+                "success": true
+            },
+            "hash": "al6Nhg"
+        },
+        ".assetpack/audio/common{m}/bgm-main.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/bgm-main.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/bgm-main-al6Nhg.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/bgm-main.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/bgm-main-al6Nhg.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/bgm-main-al6Nhg.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/common{m}/bgm-main.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/bgm-main.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/bgm-main-787F.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/bgm-main.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/bgm-main-787F.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/bgm-main-787F.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}": {
+            "isFolder": true,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {
+                "tps": true
+            },
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704473791,
+                "duration": 665.1542,
+                "success": true
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/button-large-hover.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "e_-uvg"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/button-large-press.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "uupQGg"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/button-large.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "z7Zrgw"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/button-small-hover.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "TMmn2g"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/button-small-press.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "wc1h_Q"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/button-small.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "5IbJQQ"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/character.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "PUEwMQ"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/icon-back-stroke.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "Oatutw"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/icon-back.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "ozbU8w"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/icon-info-stroke.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "EZn-dw"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/icon-info.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "dcVo_w"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/icon-pause-stroke.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "EZn-dw"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/icon-pause.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "sHZYWQ"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/icon-settings-stroke.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "yCxYzw"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/icon-settings.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "xTLX5w"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/rounded-rectangle.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "fUycdg"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/star.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "vfBo2g"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}/white-cauldron.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "VSZH7A"
+        },
+        ".assetpack/texture-packer/common{m}/common-atlas@0.5x.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "nomip": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/common{m}/common-atlas@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/common{m}/common-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/common-atlas-koP-QA@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/common{m}/common-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/common-atlas-koP-QA@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/common-atlas-koP-QA@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/common{m}/common-atlas@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/common{m}/common-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/common-atlas-TncBlg@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/common{m}/common-atlas@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/common-atlas-TncBlg@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/common-atlas-TncBlg@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/common{m}/common-atlas@0.5x.json": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/common{m}/common-atlas@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/common{m}/common-atlas@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/common{m}/common-atlas@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/common{m}/common-atlas@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/common{m}/common-atlas-tm4udA@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/common{m}/common-atlas@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/common-atlas-MAhVJA@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/common-atlas-tm4udA@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/common{m}/common-atlas@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/common{m}/common-atlas@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/common{m}/common-atlas@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/common{m}/common-atlas@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/common{m}/common-atlas-YDQhVQ@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/common{m}/common-atlas@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/common-atlas-rOLJJA@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/common-atlas-YDQhVQ@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer/common{m}/common-atlas.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "nomip": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/common{m}/common-atlas.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/common{m}/common-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/common-atlas-5OLDxQ.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/common{m}/common-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/common-atlas-5OLDxQ.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/common-atlas-5OLDxQ.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/common{m}/common-atlas.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/common{m}/common-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/common-atlas-eV1FXA.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/common{m}/common-atlas.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/common-atlas-eV1FXA.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/common-atlas-eV1FXA.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/common{m}/common-atlas.json": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/common-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/common{m}/common-atlas.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/common{m}/common-atlas.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/common{m}/common-atlas.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/common{m}/common-atlas.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/common{m}/common-atlas-4WjndQ.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/common{m}/common-atlas.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/common-atlas-OBhjrg.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/common-atlas-4WjndQ.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/common{m}/common-atlas.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/common{m}/common-atlas.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/common{m}/common-atlas.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/common{m}/common-atlas.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/common{m}/common-atlas-wSO9ow.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/common{m}/common-atlas.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/common-atlas-8uKsxQ.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/common-atlas-wSO9ow.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/dragon-skeleton.atlas": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704473795,
+                "duration": 15.44889999999998,
+                "success": true
+            },
+            "hash": "vJgrag"
+        },
+        ".assetpack/mipmap-spine-atlas/common{m}/dragon-skeleton.atlas": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/dragon-skeleton.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/spine-atlas-compress/common{m}/dragon-skeleton.png.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap-spine-atlas/common{m}/dragon-skeleton.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/dragon-skeleton-cS4C6Q.png.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/spine-atlas-compress/common{m}/dragon-skeleton.png.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/dragon-skeleton-V0bGOA.png.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/dragon-skeleton-cS4C6Q.png.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/spine-atlas-compress/common{m}/dragon-skeleton.webp.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap-spine-atlas/common{m}/dragon-skeleton.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/dragon-skeleton-regn.webp.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/spine-atlas-compress/common{m}/dragon-skeleton.webp.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/dragon-skeleton-jG-9jg.webp.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/dragon-skeleton-regn.webp.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap-spine-atlas/common{m}/dragon-skeleton@0.5x.atlas": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/dragon-skeleton.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/spine-atlas-compress/common{m}/dragon-skeleton@0.5x.png.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap-spine-atlas/common{m}/dragon-skeleton@0.5x.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/dragon-skeleton-NHTpCw@0.5x.png.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/spine-atlas-compress/common{m}/dragon-skeleton@0.5x.png.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/dragon-skeleton-JSCiDQ@0.5x.png.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/dragon-skeleton-NHTpCw@0.5x.png.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/spine-atlas-compress/common{m}/dragon-skeleton@0.5x.webp.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap-spine-atlas/common{m}/dragon-skeleton@0.5x.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/dragon-skeleton-cfF82w@0.5x.webp.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/spine-atlas-compress/common{m}/dragon-skeleton@0.5x.webp.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/dragon-skeleton-lBAjWg@0.5x.webp.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/dragon-skeleton-cfF82w@0.5x.webp.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/dragon-skeleton.json": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704473796,
+                "duration": 13.135500000000036,
+                "success": true
+            },
+            "hash": "XPCqQg"
+        },
+        ".assetpack/json/common{m}/dragon-skeleton.json": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/dragon-skeleton.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/dragon-skeleton-hMsrAw.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/common{m}/dragon-skeleton.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/dragon-skeleton-hMsrAw.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/dragon-skeleton-hMsrAw.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/dragon-skeleton.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704473809,
+                "duration": 535.5918,
+                "success": true
+            },
+            "hash": "zVMRZw"
+        },
+        ".assetpack/mipmap/common{m}/dragon-skeleton.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/dragon-skeleton.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/common{m}/dragon-skeleton.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/common{m}/dragon-skeleton.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/dragon-skeleton-KYPlUA.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/common{m}/dragon-skeleton.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/dragon-skeleton-KYPlUA.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/dragon-skeleton-KYPlUA.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/common{m}/dragon-skeleton.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/common{m}/dragon-skeleton.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/dragon-skeleton-zJOJ_A.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/common{m}/dragon-skeleton.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/dragon-skeleton-zJOJ_A.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/dragon-skeleton-zJOJ_A.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap/common{m}/dragon-skeleton@0.5x.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/dragon-skeleton.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/common{m}/dragon-skeleton@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/common{m}/dragon-skeleton@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/dragon-skeleton-npW9@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/common{m}/dragon-skeleton@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/dragon-skeleton-npW9@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/dragon-skeleton-npW9@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/common{m}/dragon-skeleton@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/common{m}/dragon-skeleton@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/dragon-skeleton-okBX9g@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/common{m}/dragon-skeleton@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/dragon-skeleton-okBX9g@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/dragon-skeleton-okBX9g@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-bubble.wav": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704473810,
+                "duration": 503.941,
+                "success": true
+            },
+            "hash": "F5admw"
+        },
+        ".assetpack/audio/common{m}/sfx-bubble.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-bubble.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-bubble-Gq8s1A.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-bubble.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-bubble-Gq8s1A.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-bubble-Gq8s1A.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/common{m}/sfx-bubble.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-bubble.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-bubble-0yPEKw.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-bubble.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-bubble-0yPEKw.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-bubble-0yPEKw.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-correct.wav": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474314,
+                "duration": 106.4026,
+                "success": true
+            },
+            "hash": "IByHrA"
+        },
+        ".assetpack/audio/common{m}/sfx-correct.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-correct.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-correct-qAjYjg.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-correct.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-correct-qAjYjg.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-correct-qAjYjg.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/common{m}/sfx-correct.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-correct.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-correct-dJAlgA.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-correct.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-correct-dJAlgA.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-correct-dJAlgA.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-countdown.wav": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474345,
+                "duration": 88.69139999999993,
+                "success": true
+            },
+            "hash": "tNhwEw"
+        },
+        ".assetpack/audio/common{m}/sfx-countdown.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-countdown.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-countdown-eue6VQ.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-countdown.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-countdown-eue6VQ.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-countdown-eue6VQ.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/common{m}/sfx-countdown.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-countdown.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-countdown-xjQxfA.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-countdown.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-countdown-xjQxfA.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-countdown-xjQxfA.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-hover.wav": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474421,
+                "duration": 73.0326,
+                "success": true
+            },
+            "hash": "P9yd"
+        },
+        ".assetpack/audio/common{m}/sfx-hover.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-hover.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-hover-Ztp4.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-hover.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-hover-Ztp4.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-hover-Ztp4.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/common{m}/sfx-hover.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-hover.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-hover-GfSppw.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-hover.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-hover-GfSppw.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-hover-GfSppw.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-incorrect.wav": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474434,
+                "duration": 70.64819999999997,
+                "success": true
+            },
+            "hash": "d0T4Uw"
+        },
+        ".assetpack/audio/common{m}/sfx-incorrect.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-incorrect.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-incorrect-7lfZww.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-incorrect.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-incorrect-7lfZww.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-incorrect-7lfZww.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/common{m}/sfx-incorrect.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-incorrect.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-incorrect-Xjl7vQ.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-incorrect.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-incorrect-Xjl7vQ.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-incorrect-Xjl7vQ.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-match.wav": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474456,
+                "duration": 112.87339999999995,
+                "success": true
+            },
+            "hash": "XMth"
+        },
+        ".assetpack/audio/common{m}/sfx-match.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-match.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-match-IS-g7Q.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-match.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-match-IS-g7Q.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-match-IS-g7Q.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/common{m}/sfx-match.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-match.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-match-6SvJyQ.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-match.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-match-6SvJyQ.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-match-6SvJyQ.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-points.wav": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474494,
+                "duration": 65.11069999999995,
+                "success": true
+            },
+            "hash": "RR4fjw"
+        },
+        ".assetpack/audio/common{m}/sfx-points.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-points.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-points-kJ5GVA.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-points.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-points-kJ5GVA.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-points-kJ5GVA.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/common{m}/sfx-points.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-points.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-points-pZfNRQ.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-points.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-points-pZfNRQ.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-points-pZfNRQ.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-press.wav": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474504,
+                "duration": 76.08179999999993,
+                "success": true
+            },
+            "hash": "59LMfg"
+        },
+        ".assetpack/audio/common{m}/sfx-press.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-press.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-press-PLf25Q.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-press.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-press-PLf25Q.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-press-PLf25Q.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/common{m}/sfx-press.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-press.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-press-HsM_uA.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-press.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-press-HsM_uA.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-press-HsM_uA.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-special.wav": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/common{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474529,
+                "duration": 113.08559999999989,
+                "success": true
+            },
+            "hash": "SzgPPQ"
+        },
+        ".assetpack/audio/common{m}/sfx-special.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-special.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-special-hWkUvg.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-special.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-special-hWkUvg.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-special-hWkUvg.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/common{m}/sfx-special.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/common{m}/sfx-special.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/common{m}/sfx-special-uHWLbw.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/common{m}/sfx-special.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/common/sfx-special-uHWLbw.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/common{m}/sfx-special-uHWLbw.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}": {
+            "isFolder": true,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets",
+            "metaData": {
+                "m": true
+            },
+            "inheritedMetaData": {},
+            "transformData": {},
+            "stats": {
+                "date": 1743704474559,
+                "duration": 0.04189999999994143,
+                "success": true
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}": {
+            "isFolder": true,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}",
+            "metaData": {
+                "tps": true
+            },
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474559,
+                "duration": 460.37829999999985,
+                "success": true
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/books-01.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "7NA_"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/books-02.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "_V9F"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/books-03.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "9Dw7kQ"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/books-04.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "1O5q"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/books-05.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "LR2nzw"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/game-header.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "zq_Upg"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/highlight.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "LMunKg"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/num-stroke-1.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "q3p61Q"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/num-stroke-2.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "0SaIQA"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/num-stroke-3.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "HLXYvw"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/num-stroke-4.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "z59wqA"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/num-stroke-5.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "qRw02w"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/piece-dragon.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "dynuvQ"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/piece-frog.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "-lgWjQ"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/piece-newt.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "2SiULQ"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/piece-snake.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "ySof"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/piece-spider.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "69usIQ"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/piece-yeti.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "_S1IhA"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/shelf-block.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "KGyA0Q"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/shelf-corner.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "ZRke8Q"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/special-blast.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "mNVj3Q"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/special-colour.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "P7AX6w"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/special-column.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "tfvcmw"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}/special-row.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "RD3uNw"
+        },
+        ".assetpack/texture-packer/game{m}/game-atlas@0.5x.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "nomip": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/game-atlas@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/game-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/game-atlas-av3G5A@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/game-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/game/game-atlas-av3G5A@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/game-atlas-av3G5A@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/game-atlas@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/game-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/game-atlas-IndnjA@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/game-atlas@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/game/game-atlas-IndnjA@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/game-atlas-IndnjA@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/game{m}/game-atlas@0.5x.json": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/game-atlas@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/game-atlas@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/game-atlas@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/game-atlas@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/game-atlas-w6F4@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/game-atlas@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/game/game-atlas-EuxihQ@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/game-atlas-w6F4@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/game-atlas@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/game-atlas@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/game-atlas@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/game-atlas@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/game-atlas-6k-y@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/game-atlas@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/game/game-atlas-HoVVxg@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/game-atlas-6k-y@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer/game{m}/game-atlas.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "nomip": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/game-atlas.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/game-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/game-atlas-vEOEJA.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/game-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/game/game-atlas-vEOEJA.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/game-atlas-vEOEJA.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/game{m}/game-atlas.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/game-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/game{m}/game-atlas-6uxtbg.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/game{m}/game-atlas.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/game/game-atlas-6uxtbg.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/game-atlas-6uxtbg.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/game{m}/game-atlas.json": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/game{m}/game-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/game-atlas.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/game-atlas.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/game-atlas.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/game-atlas.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/game-atlas-oQ9Wtw.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/game-atlas.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/game/game-atlas-SGvnmw.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/game-atlas-oQ9Wtw.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/game{m}/game-atlas.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/game{m}/game-atlas.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/game{m}/game-atlas.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/game{m}/game-atlas.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/game{m}/game-atlas-WpRQng.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/game{m}/game-atlas.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/game/game-atlas-7znalw.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/game{m}/game-atlas-WpRQng.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/home{m}": {
+            "isFolder": true,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets",
+            "metaData": {
+                "m": true
+            },
+            "inheritedMetaData": {},
+            "transformData": {},
+            "stats": {
+                "date": 1743704474569,
+                "duration": 0.26739999999995234,
+                "success": true
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/home{m}/home-atlas{tps}": {
+            "isFolder": true,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/home{m}",
+            "metaData": {
+                "tps": true
+            },
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474569,
+                "duration": 258.5402999999999,
+                "success": true
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/home{m}/home-atlas{tps}/logo-game.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/home{m}/home-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "KnN6Cw"
+        },
+        ".assetpack/texture-packer/home{m}/home-atlas.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/home{m}/home-atlas{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "nomip": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/home{m}/home-atlas.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/home{m}/home-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/home{m}/home-atlas-mG5Mqg.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/home{m}/home-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/home/home-atlas-mG5Mqg.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/home{m}/home-atlas-mG5Mqg.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/home{m}/home-atlas.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/home{m}/home-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/home{m}/home-atlas-ZtUjcw.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/home{m}/home-atlas.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/home/home-atlas-ZtUjcw.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/home{m}/home-atlas-ZtUjcw.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/home{m}/home-atlas.json": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/home{m}/home-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/home{m}/home-atlas.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/home{m}/home-atlas.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/home{m}/home-atlas.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/home{m}/home-atlas.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/home{m}/home-atlas-swlgyA.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/home{m}/home-atlas.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/home/home-atlas-hUGusA.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/home{m}/home-atlas-swlgyA.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/home{m}/home-atlas.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/home{m}/home-atlas.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/home{m}/home-atlas.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/home{m}/home-atlas.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/home{m}/home-atlas-amsU7A.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/home{m}/home-atlas.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/home/home-atlas-4GG54g.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/home{m}/home-atlas-amsU7A.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer/home{m}/home-atlas@0.5x.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/home{m}/home-atlas{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "nomip": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/home{m}/home-atlas@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/home{m}/home-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/home{m}/home-atlas-73u1jw@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/home{m}/home-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/home/home-atlas-73u1jw@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/home{m}/home-atlas-73u1jw@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/home{m}/home-atlas@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/home{m}/home-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/home{m}/home-atlas-Wx-4gA@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/home{m}/home-atlas@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/home/home-atlas-Wx-4gA@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/home{m}/home-atlas-Wx-4gA@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/home{m}/home-atlas@0.5x.json": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/home{m}/home-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/home{m}/home-atlas@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/home{m}/home-atlas@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/home{m}/home-atlas@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/home{m}/home-atlas@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/home{m}/home-atlas-raclJQ@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/home{m}/home-atlas@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/home/home-atlas-WhvtDw@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/home{m}/home-atlas-raclJQ@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/home{m}/home-atlas@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/home{m}/home-atlas@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/home{m}/home-atlas@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/home{m}/home-atlas@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/home{m}/home-atlas-5sKwFg@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/home{m}/home-atlas@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/home/home-atlas-YZDUpQ@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/home{m}/home-atlas-5sKwFg@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/preload{m}": {
+            "isFolder": true,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets",
+            "metaData": {
+                "m": true
+            },
+            "inheritedMetaData": {},
+            "transformData": {},
+            "stats": {
+                "date": 1743704474573,
+                "duration": 0.05529999999998836,
+                "success": true
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/preload{m}/cauldron-skeleton.atlas": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474573,
+                "duration": 2.362899999999854,
+                "success": true
+            },
+            "hash": "RPRh"
+        },
+        ".assetpack/mipmap-spine-atlas/preload{m}/cauldron-skeleton.atlas": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}/cauldron-skeleton.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/spine-atlas-compress/preload{m}/cauldron-skeleton.png.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap-spine-atlas/preload{m}/cauldron-skeleton.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/preload{m}/cauldron-skeleton-kMIncg.png.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/spine-atlas-compress/preload{m}/cauldron-skeleton.png.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/cauldron-skeleton-nXPppw.png.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/cauldron-skeleton-kMIncg.png.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/spine-atlas-compress/preload{m}/cauldron-skeleton.webp.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap-spine-atlas/preload{m}/cauldron-skeleton.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/preload{m}/cauldron-skeleton-Flz0Gw.webp.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/spine-atlas-compress/preload{m}/cauldron-skeleton.webp.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/cauldron-skeleton-SO49rg.webp.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/cauldron-skeleton-Flz0Gw.webp.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap-spine-atlas/preload{m}/cauldron-skeleton@0.5x.atlas": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}/cauldron-skeleton.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/spine-atlas-compress/preload{m}/cauldron-skeleton@0.5x.png.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap-spine-atlas/preload{m}/cauldron-skeleton@0.5x.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/preload{m}/cauldron-skeleton-1Y7x2w@0.5x.png.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/spine-atlas-compress/preload{m}/cauldron-skeleton@0.5x.png.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/cauldron-skeleton-rEWrEg@0.5x.png.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/cauldron-skeleton-1Y7x2w@0.5x.png.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/spine-atlas-compress/preload{m}/cauldron-skeleton@0.5x.webp.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap-spine-atlas/preload{m}/cauldron-skeleton@0.5x.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/preload{m}/cauldron-skeleton-0HDidw@0.5x.webp.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/spine-atlas-compress/preload{m}/cauldron-skeleton@0.5x.webp.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/cauldron-skeleton-x9cBkA@0.5x.webp.atlas": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/cauldron-skeleton-0HDidw@0.5x.webp.atlas",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/preload{m}/cauldron-skeleton.json": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474576,
+                "duration": 1.8917999999998756,
+                "success": true
+            },
+            "hash": "Qv7LTg"
+        },
+        ".assetpack/json/preload{m}/cauldron-skeleton.json": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}/cauldron-skeleton.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/preload{m}/cauldron-skeleton-pLdtSg.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/preload{m}/cauldron-skeleton.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/cauldron-skeleton-pLdtSg.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/cauldron-skeleton-pLdtSg.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/preload{m}/cauldron-skeleton.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474578,
+                "duration": 178.41039999999998,
+                "success": true
+            },
+            "hash": "deNGIA"
+        },
+        ".assetpack/mipmap/preload{m}/cauldron-skeleton.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}/cauldron-skeleton.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/preload{m}/cauldron-skeleton.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/preload{m}/cauldron-skeleton.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/preload{m}/cauldron-skeleton-IGBYVA.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/preload{m}/cauldron-skeleton.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/cauldron-skeleton-IGBYVA.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/cauldron-skeleton-IGBYVA.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/preload{m}/cauldron-skeleton.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/preload{m}/cauldron-skeleton.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/preload{m}/cauldron-skeleton-EI8BnQ.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/preload{m}/cauldron-skeleton.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/cauldron-skeleton-EI8BnQ.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/cauldron-skeleton-EI8BnQ.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/mipmap/preload{m}/cauldron-skeleton@0.5x.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}/cauldron-skeleton.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/preload{m}/cauldron-skeleton@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/preload{m}/cauldron-skeleton@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/preload{m}/cauldron-skeleton-oWAR4g@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/preload{m}/cauldron-skeleton@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/cauldron-skeleton-oWAR4g@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/cauldron-skeleton-oWAR4g@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/preload{m}/cauldron-skeleton@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/mipmap/preload{m}/cauldron-skeleton@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/preload{m}/cauldron-skeleton-PTDolA@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/preload{m}/cauldron-skeleton@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/cauldron-skeleton-PTDolA@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/cauldron-skeleton-PTDolA@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/preload{m}/preload-atlas{tps}": {
+            "isFolder": true,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}",
+            "metaData": {
+                "tps": true
+            },
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474581,
+                "duration": 255.01769999999988,
+                "success": true
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/preload{m}/preload-atlas{tps}/background.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}/preload-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "wg3VWQ"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/preload{m}/preload-atlas{tps}/circle.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}/preload-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "OrhuRQ"
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/preload{m}/preload-atlas{tps}/logo-pixi.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}/preload-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "OnCGVA"
+        },
+        ".assetpack/texture-packer/preload{m}/preload-atlas.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}/preload-atlas{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "nomip": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/preload{m}/preload-atlas.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/preload{m}/preload-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/preload{m}/preload-atlas-y6uB7g.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/preload{m}/preload-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/preload-atlas-y6uB7g.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/preload-atlas-y6uB7g.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/preload{m}/preload-atlas.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/preload{m}/preload-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/preload{m}/preload-atlas-662YCg.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/preload{m}/preload-atlas.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/preload-atlas-662YCg.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/preload-atlas-662YCg.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/preload{m}/preload-atlas.json": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}/preload-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/preload{m}/preload-atlas.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/preload{m}/preload-atlas.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/preload{m}/preload-atlas.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/preload{m}/preload-atlas.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/preload{m}/preload-atlas-1X2TbA.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/preload{m}/preload-atlas.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/preload-atlas-mRXUzA.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/preload-atlas-1X2TbA.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/preload{m}/preload-atlas.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/preload{m}/preload-atlas.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/preload{m}/preload-atlas.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/preload{m}/preload-atlas.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/preload{m}/preload-atlas-QHYHBQ.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/preload{m}/preload-atlas.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/preload-atlas-cahNvA.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/preload-atlas-QHYHBQ.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer/preload{m}/preload-atlas@0.5x.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}/preload-atlas{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "nomip": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/preload{m}/preload-atlas@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/preload{m}/preload-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/preload{m}/preload-atlas-04mljQ@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/preload{m}/preload-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/preload-atlas-04mljQ@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/preload-atlas-04mljQ@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/preload{m}/preload-atlas@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/preload{m}/preload-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/preload{m}/preload-atlas-vjD6Cg@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/preload{m}/preload-atlas@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/preload-atlas-vjD6Cg@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/preload-atlas-vjD6Cg@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/preload{m}/preload-atlas@0.5x.json": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/preload{m}/preload-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/preload{m}/preload-atlas@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/preload{m}/preload-atlas@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/preload{m}/preload-atlas@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/preload{m}/preload-atlas@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/preload{m}/preload-atlas-mwFqTw@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/preload{m}/preload-atlas@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/preload-atlas-Wk93_g@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/preload-atlas-mwFqTw@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/preload{m}/preload-atlas@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/preload{m}/preload-atlas@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/preload{m}/preload-atlas@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/preload{m}/preload-atlas@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/preload{m}/preload-atlas-WBAWiw@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/preload{m}/preload-atlas@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/preload/preload-atlas-1W4-@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/preload{m}/preload-atlas-WBAWiw@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/result{m}": {
+            "isFolder": true,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets",
+            "metaData": {
+                "m": true
+            },
+            "inheritedMetaData": {},
+            "transformData": {},
+            "stats": {
+                "date": 1743704474642,
+                "duration": 0.024299999999811916,
+                "success": true
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/result{m}/result-atlas{tps}": {
+            "isFolder": true,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/result{m}",
+            "metaData": {
+                "tps": true
+            },
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1743704474642,
+                "duration": 200.7150999999999,
+                "success": true
+            }
+        },
+        "C:/xampp/htdocs/gemma/raw-assets/result{m}/result-atlas{tps}/result-base.png": {
+            "isFolder": false,
+            "parent": "C:/xampp/htdocs/gemma/raw-assets/result{m}/result-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "Kn-60Q"
+        },
+        ".assetpack/texture-packer/result{m}/result-atlas.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/result{m}/result-atlas{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "nomip": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/result{m}/result-atlas.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/result{m}/result-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/result{m}/result-atlas-egUMLQ.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/result{m}/result-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/result/result-atlas-egUMLQ.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/result{m}/result-atlas-egUMLQ.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/result{m}/result-atlas.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/result{m}/result-atlas.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/result{m}/result-atlas-sHb7Rg.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/result{m}/result-atlas.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/result/result-atlas-sHb7Rg.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/result{m}/result-atlas-sHb7Rg.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/result{m}/result-atlas.json": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/result{m}/result-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/result{m}/result-atlas.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/result{m}/result-atlas.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/result{m}/result-atlas.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/result{m}/result-atlas.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/result{m}/result-atlas-UaZMEg.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/result{m}/result-atlas.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/result/result-atlas-Kg_NHQ.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/result{m}/result-atlas-UaZMEg.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/result{m}/result-atlas.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/result{m}/result-atlas.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/result{m}/result-atlas.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/result{m}/result-atlas.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/result{m}/result-atlas-xXkDYw.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/result{m}/result-atlas.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/result/result-atlas-7vC4TA.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/result{m}/result-atlas-xXkDYw.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer/result{m}/result-atlas@0.5x.png": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/result{m}/result-atlas{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "nomip": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/result{m}/result-atlas@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/result{m}/result-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/result{m}/result-atlas-fDgEBA@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/result{m}/result-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/result/result-atlas-fDgEBA@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/result{m}/result-atlas-fDgEBA@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/result{m}/result-atlas@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/result{m}/result-atlas@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/cache-buster/result{m}/result-atlas-j9z02A@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/result{m}/result-atlas@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/xampp/htdocs/gemma/public/assets/result/result-atlas-j9z02A@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/result{m}/result-atlas-j9z02A@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/result{m}/result-atlas@0.5x.json": {
+            "isFolder": false,
+            "transformParent": "C:/xampp/htdocs/gemma/raw-assets/result{m}/result-atlas{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/result{m}/result-atlas@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/result{m}/result-atlas@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/result{m}/result-atlas@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/result{m}/result-atlas@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/result{m}/result-atlas-UHA5tw@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/result{m}/result-atlas@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/result/result-atlas-JeiYzw@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/result{m}/result-atlas-UHA5tw@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/result{m}/result-atlas@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/result{m}/result-atlas@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/result{m}/result-atlas@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/result{m}/result-atlas@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/cache-buster/result{m}/result-atlas-RDpdUA@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/result{m}/result-atlas@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/xampp/htdocs/gemma/public/assets/result/result-atlas-1twvyA@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/cache-buster/result{m}/result-atlas-RDpdUA@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        }
+    }
+}

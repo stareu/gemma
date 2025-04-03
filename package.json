@@ -4,13 +4,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "assets": "assetpack",
+    "start": "vite --open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@assetpack/core": "^1.4.0",
     "@pixi/layout": "^2.0.1",
     "animejs": "^3.2.2",
     "bootstrap": "^5.3.3",
@@ -21,6 +23,7 @@
     "pixi.js": "^8.8.1",
     "source-map-loader": "^5.0.0",
     "tailwindcss": "^4.0.14",
+    "vite": "^6.2.5",
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
