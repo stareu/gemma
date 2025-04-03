@@ -1,4 +1,4 @@
-import { Application, Sprite, Assets, Texture, Container, Spritesheet, Graphics } from 'pixi.js'
+import { Application, Sprite, Assets, Texture, Container, Spritesheet, Graphics, Color } from 'pixi.js'
 import anime from 'animejs'
 import { Layout } from '@pixi/layout'
 
@@ -92,27 +92,39 @@ class App {
 			content: {
 				gameArea: {
 					content: {
-						mySprite2: {
+						bg: {
 							content: sprite2,
 							styles: {
 								maxWidth: 1920,
 								maxHeight: 1080,
+								position: 'center'
 							}
 						},
-						mySprite: {
-							content: sprite,
-							styles: {
-								maxHeight: 200,
-								position: 'leftBottom',
-							}
+						blocks: {
+							content: {
+								p1: {
+									content: new Container(),
+									styles: {
+										width: 2,
+										height: '100%',
+										background: Sprite.from(Texture.WHITE),
+										backgroundSize: 'stretch',
+										// overflow: 'hidden',
+									}
+								},
+							},
+							// styles: {
+							// 	// maxHeight: 200,
+							// 	// maxWidth: '100%',
+							// 	// position: 'leftBottom',
+							// }
 						}
 					},
 					styles: {
 						position: 'center',
 						width: APP_WIDTH,
 						height: APP_HEIGHT,
-						background: gameArea,
-						overflow: 'hidden'
+						// overflow: 'hidden'
 					}
 				},
 			}
