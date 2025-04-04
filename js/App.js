@@ -4,6 +4,7 @@ import { Layout } from '@pixi/layout'
 import { navigation } from './navigation.js'
 import { LoadScreen } from './screens/LoadScreen.js'
 import { TiledBackground } from './screens/TiledBackground.js'
+import { Events } from './events/Events.js'
 
 export const pixiApp = new Application()
 
@@ -13,12 +14,13 @@ class App {
 
 	async init() {
 		await this._initPixiApp()
-		
+
 		this._initResize()
 
 		await this._initAssets()
 
 		await navigation.setBackground(TiledBackground)
+		await navigation.showScreen(LoadScreen)
 	}
 
 	async _initPixiApp() {
@@ -61,6 +63,8 @@ class App {
 			app.renderer.canvas.style.height = `${windowHeight}px`;
 
 			window.scrollTo(0, 0)
+
+			Events.WindowResize.emit('change', width, height)
 
 			// TODO: выше для узких экранов сначала создаётся canvas бОльшего размера и уменьшается до размера экрана
 			// Якобы лучше, если всегда указывать width, height канваса по размеру экрана (не через style), а скейлить уже некий внутренний контейнер
