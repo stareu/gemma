@@ -19,8 +19,12 @@ class App {
 
 		await this._initAssets()
 
+		navigation.init()
+
 		await navigation.setBackground(TiledBackground)
 		await navigation.showScreen(LoadScreen)
+
+		this._resize()
 	}
 
 	async _initPixiApp() {
@@ -36,49 +40,49 @@ class App {
 	}
 
 	_initResize() {
-		const onResize = () => {
-			const app = this.pixiApp
-			const windowWidth = window.innerWidth;
-			const windowHeight = window.innerHeight;
-			const minWidth = 375;
-			const minHeight = 700;
+		window.addEventListener('resize', this._resize.bind(this))
 
-			// Если не достигнуты миниальные значения, то и canvas и view будут иметь одинаковый размер
-			// Если width или height меньше минимальных, то будет scale renderer view (по высоте или ширине), а canvas всё так же растянется на весь экран
-			const scaleX = minWidth > windowWidth ? minWidth / windowWidth : 1;
-			const scaleY = minHeight > windowHeight ? minHeight / windowHeight : 1;
-			const scale = Math.max(scaleX, scaleY);
+		this._resize()
+	}
 
-			// Если экран больше минимальных значений, то всегда будет 1
-			// Если экран меньше, то width/height БУДУТ равны minWidth/minHeight
-			const width = windowWidth * scale;
-			const height = windowHeight * scale;
+	_resize() {
+		const app = this.pixiApp
+		const windowWidth = window.innerWidth;
+		const windowHeight = window.innerHeight;
+		const minWidth = 375;
+		const minHeight = 700;
 
-			// canvas растянется до размеров width и height (то есть до минимального размера контейнера игры по ширине или высоте)
-			// То есть, если экран 400px, то canvas будет шириной minWidth, что выходит за рамки.
-			// Поэтому ещё ниже уменьшаем итоговое изображение через стили, чтобы вместить точно по ширине/высоте
-			app.renderer.resize(width, height)
+		// Если не достигнуты миниальные значения, то и canvas и view будут иметь одинаковый размер
+		// Если width или height меньше минимальных, то будет scale renderer view (по высоте или ширине), а canvas всё так же растянется на весь экран
+		const scaleX = minWidth > windowWidth ? minWidth / windowWidth : 1;
+		const scaleY = minHeight > windowHeight ? minHeight / windowHeight : 1;
+		const scale = Math.max(scaleX, scaleY);
 
-			app.renderer.canvas.style.width = `${windowWidth}px`;
-			app.renderer.canvas.style.height = `${windowHeight}px`;
+		// Если экран больше минимальных значений, то всегда будет 1
+		// Если экран меньше, то width/height БУДУТ равны minWidth/minHeight
+		const width = windowWidth * scale;
+		const height = windowHeight * scale;
 
-			window.scrollTo(0, 0)
+		// canvas растянется до размеров width и height (то есть до минимального размера контейнера игры по ширине или высоте)
+		// То есть, если экран 400px, то canvas будет шириной minWidth, что выходит за рамки.
+		// Поэтому ещё ниже уменьшаем итоговое изображение через стили, чтобы вместить точно по ширине/высоте
+		app.renderer.resize(width, height)
 
-			Events.WindowResize.emit('change', width, height)
+		app.renderer.canvas.style.width = `${windowWidth}px`;
+		app.renderer.canvas.style.height = `${windowHeight}px`;
 
-			// TODO: выше для узких экранов сначала создаётся canvas бОльшего размера и уменьшается до размера экрана
-			// Якобы лучше, если всегда указывать width, height канваса по размеру экрана (не через style), а скейлить уже некий внутренний контейнер
-			// Попробовать потом сделать и сравнить
+		window.scrollTo(0, 0)
 
-			// todo: почему при изменении height спрайт смещается так, будто у него точка опоры снизу, а не 0,0
-			// app.renderer.resize(900, 900)
-			// app.canvas.width = 400
-			// app.canvas.height = 400
-		}
+		Events.WindowResize.emit('change', width, height)
 
-		window.addEventListener('resize', onResize)
+		// TODO: выше для узких экранов сначала создаётся canvas бОльшего размера и уменьшается до размера экрана
+		// Якобы лучше, если всегда указывать width, height канваса по размеру экрана (не через style), а скейлить уже некий внутренний контейнер
+		// Попробовать потом сделать и сравнить
 
-		onResize()
+		// todo: почему при изменении height спрайт смещается так, будто у него точка опоры снизу, а не 0,0
+		// app.renderer.resize(900, 900)
+		// app.canvas.width = 400
+		// app.canvas.height = 400
 	}
 
 	async _initAssets() {
