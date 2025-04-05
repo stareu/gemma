@@ -1,10 +1,17 @@
 import { Application, Sprite, Assets, Texture, Container, Spritesheet, Graphics, Color } from 'pixi.js'
-import anime from 'animejs'
 import { Layout } from '@pixi/layout'
 import { navigation } from './navigation.js'
-import { LoadScreen } from './screens/LoadScreen.js'
+import LoadScreen from './screens/LoadScreen.js'
+import HomeScreen from './screens/HomeScreen.js'
 import { TiledBackground } from './screens/TiledBackground.js'
 import { Events } from './events/Events.js'
+
+import * as _ from 'radashi'
+import { engine } from 'animejs'
+
+globalThis._ = _
+
+engine.useDefaultMainLoop = false
 
 export const pixiApp = new Application()
 
@@ -15,6 +22,8 @@ class App {
 	async init() {
 		await this._initPixiApp()
 
+		pixiApp.ticker.add(() => engine.update())
+
 		this._initResize()
 
 		await this._initAssets()
@@ -22,7 +31,8 @@ class App {
 		navigation.init()
 
 		await navigation.setBackground(TiledBackground)
-		await navigation.showScreen(LoadScreen)
+		// await navigation.showScreen(LoadScreen)
+		await navigation.showScreen(HomeScreen)
 
 		this._resize()
 	}
@@ -93,7 +103,7 @@ class App {
 			manifest,
 			basePath: 'assets'
 		})
-		
+		debugger
 		await Assets.loadBundle('preload')
 	}
 }

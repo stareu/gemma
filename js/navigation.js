@@ -70,7 +70,9 @@ class Navigation {
 	async _hideAndRemoveScreen(screen) {
 		screen.interactiveChildren = false
 
-		await screen.hide()
+		if (screen.hide) {
+			await screen.hide()
+		}
 
 		screen.parent.removeChild(screen)
 	}
