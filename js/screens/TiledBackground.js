@@ -6,7 +6,7 @@ export class TiledBackground extends Container {
 		super()
 
 		this._sprite = new TilingSprite({
-			texture: Texture.from('background'),
+			texture: Texture.from('bg2'),
 			width: pixiApp.screen.width,
 			height: pixiApp.screen.height
 		})

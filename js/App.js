@@ -5,6 +5,7 @@ import LoadScreen from './screens/LoadScreen.js'
 import HomeScreen from './screens/HomeScreen.js'
 import { TiledBackground } from './screens/TiledBackground.js'
 import { Events } from './events/Events.js'
+import SettingsPopup from './popups/SettingsPopup.js'
 
 import * as _ from 'radashi'
 import { engine } from 'animejs'
@@ -29,6 +30,8 @@ class App {
 		await this._initAssets()
 
 		navigation.init()
+
+		globalThis.appNavigation = navigation
 
 		await navigation.setBackground(TiledBackground)
 		// await navigation.showScreen(LoadScreen)
@@ -103,7 +106,7 @@ class App {
 			manifest,
 			basePath: 'assets'
 		})
-		debugger
+
 		await Assets.loadBundle('preload')
 	}
 }

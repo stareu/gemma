@@ -1,12 +1,13 @@
 import { Container, Sprite, Text, Texture } from "pixi.js"
 import { Layout } from "@pixi/layout"
 import { Button } from "@pixi/ui"
+import { navigation } from "../navigation.js"
+import GameScreen from "./GameScreen.js"
 
 class HomeScreen extends Layout {
 	constructor() {
 		super()
 
-		const sword = Sprite.from('sword')
 		const rock = new Sprite({
 			texture: Texture.from('rock'),
 			x: -150,
@@ -27,6 +28,8 @@ class HomeScreen extends Layout {
 
 		globalThis.text = text
 
+		const sword = Sprite.from('sword')
+
 		const btn = new Container({
 			children: [
 				sword,
@@ -35,7 +38,6 @@ class HomeScreen extends Layout {
 			]
 		})
 		
-		const startBtn = new Button(btn)
 		sword.anchor.set(0.5, 0.5)
 		sword.scale = 0.5
 		sword.scale.y = -sword.scale.x
@@ -51,6 +53,13 @@ class HomeScreen extends Layout {
 					position: 'center'
 				}
 			}
+		})
+
+		const playBtn = new Button(btn)
+
+		playBtn.onPress.connect(() => {
+			playBtn.enabled = false
+			navigation.showScreen(GameScreen)
 		})
 	}
 
