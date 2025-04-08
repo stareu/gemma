@@ -23,3 +23,7 @@ export function match3GetConfig(customConfig = {}) {
 		...customConfig
 	}
 }
+
+export function match3GetBlocks(mode) {
+    return blocks[mode].concat(blocks.special)
+}

@@ -4,6 +4,7 @@ import { Button } from "@pixi/ui"
 import { navigation } from "../navigation.js"
 import { animate } from "animejs"
 import GameScore from "../ui/GameScore.js"
+import Match3 from "../match3/Match3.js"
 
 class GameScreen extends Layout {
 	constructor() {
@@ -28,6 +29,10 @@ class GameScreen extends Layout {
 			// 	content: // timer
 			// },
 		})
+
+		const match3 = this.match3 = new Match3()
+
+		this.addChild(match3)
 	}
 
 	async show() {

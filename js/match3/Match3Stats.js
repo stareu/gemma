@@ -50,6 +50,18 @@ class Match3Stats {
 
         return grade;
     }
+
+	getGameplayPerformance(playTime) {
+		const grade = this.caulculateGrade(playTime)
+
+        return {
+			score: this.score,
+			matches: this.matches,
+			pops: this.pops,
+			specials: this.specials,
+			grade
+		}
+	}
 }
 
 export default Match3Stats

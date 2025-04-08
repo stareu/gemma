@@ -55,6 +55,10 @@ class Navigation {
 			}
 		})
 
+		if (screen.prepare) {
+			await screen.prepare()
+		}
+
 		screen.setStyles && screen.setStyles({
 			position: 'leftTop',
 			width: '100%',
