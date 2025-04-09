@@ -67,8 +67,6 @@ class Match3Board {
 		match3ForEach(this.grid, (gridPosition, type) => {
             this.createPiece(gridPosition, type)
         })
-
-		// todo: где гарантия, что можно сделать match?
 	}
 
 	// Создание ячеек поля (здесь это piece)

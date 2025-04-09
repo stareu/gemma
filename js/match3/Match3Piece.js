@@ -1,6 +1,6 @@
 import { Container, Sprite, Texture } from "pixi.js"
 import { pixiApp } from "../App.js"
-import { animate } from "animejs"
+import { animate, utils } from "animejs"
 
 const defaultMatch3PieceOptions = {
 	/** Piece name, must match one of the textures available */
@@ -212,6 +212,11 @@ class Match3Piece extends Container {
 
 		// todo
 		// resolveAndKillTweens(this)
+
+
+		// window.keks = () => {
+		// 	utils.remove(this.position)
+		// }
 
 		await animate(this.position, {
 			x,

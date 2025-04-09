@@ -1,10 +1,10 @@
 export const match3ValidModes = ['test', 'easy', 'normal', 'hard'];
 
 const blocks = {
-    test: ['piece-dragon', 'piece-frog', 'piece-newt'],
-    easy: ['piece-dragon', 'piece-frog', 'piece-newt', 'piece-snake'],
-    normal: ['piece-dragon', 'piece-frog', 'piece-newt', 'piece-snake', 'piece-spider'],
-    hard: ['piece-dragon', 'piece-frog', 'piece-newt', 'piece-snake', 'piece-spider', 'piece-yeti'],
+    test: ['cell-garlic', 'cell-cheese1', 'cell-tomato'],
+    easy: ['cell-garlic', 'cell-cheese1', 'cell-tomato', 'cell-apple'],
+    normal: ['cell-garlic', 'cell-cheese1', 'cell-tomato', 'cell-apple', 'cell-cheese2'],
+    hard: ['cell-garlic', 'cell-cheese1', 'cell-tomato', 'cell-apple', 'cell-cheese2', 'cell-cabbage'],
     special: []
     // special: ['special-blast', 'special-row', 'special-column', 'special-colour'],
 };
@@ -12,10 +12,10 @@ const blocks = {
 const defaultConfig = {
     rows: 9,
     columns: 7,
-    tileSize: 50,
+    tileSize: 90,
     freeMoves: false,
     duration: 60000,
-    mode: 'normal',
+    mode: 'hard',
 };
 
 export function match3GetConfig(customConfig = {}) {

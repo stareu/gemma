@@ -1,4 +1,5 @@
 // вернёт [ [1, 2, 1, 3], [3, 2, 1, 1], ... ]
+// mb todo: нет гарантии, что будут match'и
 export function match3CreateGrid(rows = 6, columns = 6, types) {
     const grid = []
 
@@ -109,11 +110,12 @@ function match3GetMatchesByOrientation(grid, matchSize, orientation) {
             const column = orientation === 'horizontal' ? s : p;
             const type = grid[row][column];
 
+			// Составляем ряд одинаковых элементов (сколько угодно)
             if (type && type === lastType) {
                 // Type is the same as the last type, append to the match list
                 currentMatch.push({ row, column });
             } else {
-                // Type is different from last - check current match length and append it to the results if suitable
+                // Если ряд из 3 и более элементов - это match
                 if (currentMatch.length >= matchSize) {
                     matches.push(currentMatch);
                 }
@@ -138,8 +140,7 @@ function match3GetMatchesByOrientation(grid, matchSize, orientation) {
 }
 
 export function match3ComparePositions(a, b) {
-	// todo: почему разные операторы сравнения?
-    return a.row === b.row && a.column == b.column;
+    return a.row === b.row && a.column === b.column
 }
 
 export function match3IncludesPosition(positions, position) {
@@ -167,7 +168,8 @@ export function match3GetMatches(grid, filter, matchSize = 3) {
     const filteredMatches = [];
 
     for (const match of allMatches) {
-        let valid = false;
+        let valid = false
+
         for (const position of match) {
             // Compare each position of the match to see if includes one of the filter positions
             for (const filterPosition of filter) {
@@ -193,34 +195,43 @@ export function match3IsValidPosition(grid, position) {
 }
 
 export function match3ApplyGravity(grid) {
-    const rows = grid.length;
-    const columns = grid[0].length;
-    const changes = [];
+    const rows = grid.length
+    const columns = grid[0].length
+    const changes = []
 
     for (let r = rows - 1; r >= 0; r--) {
         for (let c = 0; c < columns; c++) {
-            let position = { row: r, column: c };
-            const belowPosition = { row: r + 1, column: c };
-            let hasChanged = false;
+            let position = { row: r, column: c }
+            const belowPosition = { row: r + 1, column: c }
+            let hasChanged = false
 
             // Skip this one if position below is out of bounds
-            if (!match3IsValidPosition(grid, belowPosition)) continue;
+            if (!match3IsValidPosition(grid, belowPosition)) {
+				continue
+			}
 
-            // Retrive ethe type of the position below
-            let belowType = match3GetPieceType(grid, belowPosition);
+            // Retrive the type of the position below
+            let belowType = match3GetPieceType(grid, belowPosition)
 
             // Keep moving the piece down if position below is valid and empty
             while (match3IsValidPosition(grid, belowPosition) && belowType === 0) {
-                hasChanged = true;
-                match3SwapPieces(grid, position, belowPosition);
-                position = { ...belowPosition };
-                belowPosition.row += 1;
-                belowType = match3GetPieceType(grid, belowPosition);
+                hasChanged = true
+
+                match3SwapPieces(grid, position, belowPosition)
+
+                position = Object.assign({}, belowPosition)
+
+                belowPosition.row += 1
+
+                belowType = match3GetPieceType(grid, belowPosition)
             }
 
             if (hasChanged) {
                 // Append a new change if position has changed [<from>, <to>]
-                changes.push([{ row: r, column: c }, position]);
+                changes.push([
+					{ row: r, column: c },
+					position
+				])
             }
         }
     }
@@ -256,41 +267,41 @@ export function match3GridToString(grid) {
 }
 
 export function match3FillUp(grid, types) {
-    // Create a temp grid that will provide pieces to fill up corresponding slots
-    // using the same grid creation algorithm to avoid pre-made combinations
-    const tempGrid = match3CreateGrid(grid.length, grid[0].length, types);
+	// Создаём временный grid с рандомным заполнением
+	// И для оригинальной grid заполняем пустые ячейки
+	// mb todo: здесь нет гарантии, что при заполнении будут match'и
+    const tempGrid = match3CreateGrid(grid.length, grid[0].length, types)
 
-    const rows = grid.length;
-    const columns = grid[0].length;
-    const newPositions = [];
+    const rows = grid.length
+    const columns = grid[0].length
+    const newPositions = []
 
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
             if (!grid[r][c]) {
-                grid[r][c] = tempGrid[r][c];
-                newPositions.push({ row: r, column: c });
+                grid[r][c] = tempGrid[r][c]
+                newPositions.push({ row: r, column: c })
             }
         }
     }
 
-    return newPositions.reverse();
+    return newPositions.reverse()
 }
 
 export function match3FilterUniquePositions(positions) {
-	// todo: wtf? зачем два массива, когда достаточно одного
-    const result = [];
-    const register = [];
+    const result = []
+    const register = []
 
     for (const position of positions) {
-        const id = position.row + ':' + position.column;
+        const id = position.row + ':' + position.column
 
         if (!register.includes(id)) {
-            register.push(id);
-            result.push(position);
+            register.push(id)
+            result.push(position)
         }
     }
 
-    return result;
+    return result
 }
 
 export function match3PositionToString(position) {

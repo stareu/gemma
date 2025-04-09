@@ -121,8 +121,9 @@ class Match3Process {
 	async applyGravity() {
 		const board = this.match3.board
         const changes = match3ApplyGravity(board.grid)
-        console.log('[Match3] Apply gravity - moved pieces:', changes.length)
         const animPromises = []
+
+        console.log('[Match3] Apply gravity - moved pieces:', changes.length)
 
         for (const change of changes) {
             const from = change[0]
@@ -143,15 +144,16 @@ class Match3Process {
     }
 
     async refillGrid() {
-        const newPieces = match3FillUp(this.match3.board.grid, this.match3.board.commonTypes)
+		const board = this.match3.board
+		const boardGrid = board.grid
+
+        const newPieces = match3FillUp(boardGrid, board.commonTypes)
 
         console.log('[Match3] Refill grid - new pieces:', newPieces.length)
 
         const animPromises = []
         const piecesPerColumn = {}
 
-		const board = this.match3.board
-		const boardGrid = board.grid
 		const tileSize = this.match3.config.tileSize
 
         for (const position of newPieces) {
