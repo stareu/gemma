@@ -7,7 +7,7 @@ import Match3Piece from "./Match3Piece.js"
 class Match3Board {
 	match3
 
-	pieces
+	pieces = []
 	piecesContainer
 	piecesMask
 
@@ -26,12 +26,12 @@ class Match3Board {
         this.piecesContainer = new Container()
         this.match3.addChild(this.piecesContainer)
 
-        this.piecesMask = new Graphics()
-			.rect(-2, -2, 4, 4)
-			.fill({ color: 0xff0000, alpha: 0.5 })
+        // this.piecesMask = new Graphics()
+		// 	.rect(-2, -2, 4, 4)
+		// 	.fill({ color: 0xff0000, alpha: 0.5 })
 
-        this.match3.addChild(this.piecesMask)
-        this.piecesContainer.mask = this.piecesMask
+        // this.match3.addChild(this.piecesMask)
+        // this.piecesContainer.mask = this.piecesMask
 	}
 
 	setup(config) {
@@ -39,8 +39,8 @@ class Match3Board {
 		this.columns = config.columns
 		this.tileSize = config.tileSize
 
-		this.piecesMask.width = this.getWidth()
-        this.piecesMask.height = this.getHeight()
+		// this.piecesMask.width = this.getWidth()
+        // this.piecesMask.height = this.getHeight()
 
         this.piecesContainer.visible = true
 
@@ -68,7 +68,7 @@ class Match3Board {
             this.createPiece(gridPosition, type)
         })
 
-		// todo: где гарантия, что можно сделать ряд?
+		// todo: где гарантия, что можно сделать match?
 	}
 
 	// Создание ячеек поля (здесь это piece)
@@ -99,6 +99,8 @@ class Match3Board {
 
 		this.pieces.push(piece)
         this.piecesContainer.addChild(piece)
+
+		return piece
 	}
 
 	async spawnPiece(position, pieceType) {
@@ -128,7 +130,7 @@ class Match3Board {
 		}
 
         const isSpecial = this.match3.special.isSpecial(type)
-        const combo = this.match3.process.getProcessRound()
+        const combo = this.match3.process.round
 
         match3SetPieceType(this.grid, position, 0)
 
@@ -194,6 +196,17 @@ class Match3Board {
 
     bringToFront(piece) {
         this.piecesContainer.addChild(piece)
+    }
+
+    reset() {
+        let i = this.pieces.length
+
+        while (i--) {
+            const piece = this.pieces[i]
+            this.disposePiece(piece);
+        }
+
+        this.pieces.length = 0
     }
 
 	disposePiece(piece) {

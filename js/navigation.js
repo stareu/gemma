@@ -36,6 +36,11 @@ class Navigation {
 
 		this.layout.resize(width, height)
 		this.background.resize(width, height)
+
+		// this.currentScreen.setStyles({
+		// 	width,
+		// 	height
+		// })
 	}
 
 	setBackground(BackgroundConstructor) {
@@ -46,24 +51,26 @@ class Navigation {
 
 	/** @param { Container } screen */
 	async _addAndShowScreen(screen) {
-		this.layout.addContent({
-			content: screen,
-			styles: {
-				position: 'leftTop',
-				width: '100%',
-				height: '100%'
-			}
-		})
-
-		if (screen.prepare) {
-			await screen.prepare()
-		}
-
 		screen.setStyles && screen.setStyles({
 			position: 'leftTop',
 			width: '100%',
 			height: '100%'
 		})
+
+		this.layout.addContent(screen)
+
+		// this.layout.addContent({
+		// 	content: screen,
+		// 	styles: {
+		// 		position: 'leftTop',
+		// 		width: '100%',
+		// 		height: '100%'
+		// 	}
+		// })
+
+		if (screen.prepare) {
+			await screen.prepare()
+		}
 
 		screen.interactiveChildren = false
 		await screen.show()

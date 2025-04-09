@@ -28,8 +28,8 @@ class Match3Stats {
         for (const match of data.matches) {
             const points = match.length + data.matches.length * data.combo
 
-            this.data.score += points
-            this.data.matches ++
+            this.score += points
+            this.matches ++
         }
 	}
 

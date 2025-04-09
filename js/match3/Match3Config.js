@@ -5,7 +5,8 @@ const blocks = {
     easy: ['piece-dragon', 'piece-frog', 'piece-newt', 'piece-snake'],
     normal: ['piece-dragon', 'piece-frog', 'piece-newt', 'piece-snake', 'piece-spider'],
     hard: ['piece-dragon', 'piece-frog', 'piece-newt', 'piece-snake', 'piece-spider', 'piece-yeti'],
-    special: ['special-blast', 'special-row', 'special-column', 'special-colour'],
+    special: []
+    // special: ['special-blast', 'special-row', 'special-column', 'special-colour'],
 };
 
 const defaultConfig = {
@@ -13,7 +14,7 @@ const defaultConfig = {
     columns: 7,
     tileSize: 50,
     freeMoves: false,
-    duration: 60,
+    duration: 60000,
     mode: 'normal',
 };
 

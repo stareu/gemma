@@ -50,13 +50,14 @@ export function match3GetRandomType(types, exclude) {
 // Есть ли совпадения на 3 клетки (проверяем 2 клетки назад по вертикали или горизонтали)
 function matchPreviousTypes(grid, position, type) {
     // Check if previous horizontal positions are forming a match
-    const horizontal1 = grid[position.row][position.column - 1]
-    const horizontal2 = grid[position.row][position.column - 2]
+    const horizontal1 = grid[position.row]?.[position.column - 1]
+    const horizontal2 = grid[position.row]?.[position.column - 2]
     const horizontalMatch = type === horizontal1 && type === horizontal2
 
+	// todo: refactor - заменить ?.
     // Check if previous vertical positions are forming a match
-    const vertical1 = grid[position.row - 1][position.column]
-    const vertical2 = grid[position.row - 2][position.column]
+    const vertical1 = grid[position.row - 1]?.[position.column]
+    const vertical2 = grid[position.row - 2]?.[position.column]
     const verticalMatch = type === vertical1 && type === vertical2
 
     // Return if either horizontal or vertical psoitions are forming a match

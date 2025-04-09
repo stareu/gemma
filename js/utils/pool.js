@@ -10,7 +10,7 @@ class Pool {
     }
 
 	get() {
-		this.list.pop() ?? new this.ctor();
+		return this.list.pop() ?? new this.ctor();
     }
 
     giveBack(item) {

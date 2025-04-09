@@ -1,5 +1,6 @@
 import { Container, Sprite, Texture } from "pixi.js"
 import { pixiApp } from "../App.js"
+import { animate } from "animejs"
 
 const defaultMatch3PieceOptions = {
 	/** Piece name, must match one of the textures available */
@@ -23,8 +24,14 @@ class Match3Piece extends Container {
 	pressing
 	dragging
 
-	type
-	name
+	type = 0
+	name = ''
+
+    pressX = 0
+    pressY = 0
+
+    row = 0
+    column = 0
 
 	constructor() {
 		super()
@@ -203,16 +210,15 @@ class Match3Piece extends Container {
 	async animateSwap(x, y) {
 		this.lock()
 
+		// todo
 		// resolveAndKillTweens(this)
 
-		const duration = 0.2
-
-		// await gsap.to(this, {
-		// 	x,
-		// 	y,
-		// 	duration,
-		// 	ease: 'quad.out'
-		// })
+		await animate(this.position, {
+			x,
+			y,
+			duration: 200,
+			ease: 'outQuad'
+		}).then()
 
 		this.unlock()
 	}
@@ -222,14 +228,12 @@ class Match3Piece extends Container {
 
 		// resolveAndKillTweens(this.position)
 
-		const duration = 0.5
-
-		// await gsap.to(this.position, {
-		// 	x,
-		// 	y,
-		// 	duration,
-		// 	ease: easeSingleBounce
-		// })
+		await animate(this.position, {
+			x,
+			y,
+			duration: 500,
+			ease: 'outBounce'
+		}).then()
 
 		this.unlock()
 	}
@@ -239,13 +243,10 @@ class Match3Piece extends Container {
 
 		// resolveAndKillTweens(this.image)
 
-		const duration = 0.1
-
-		await gsap.to(this.image, {
+		await animate(this.image, {
 			alpha: 0,
-			duration,
-			ease: 'sine.out'
-		})
+			duration: 500,
+		}).then()
 
 		this.visible = false
 	}

@@ -1,4 +1,4 @@
-import { Container, Sprite, Text, Texture } from "pixi.js"
+import { Container, Sprite, Text, Texture, Assets } from "pixi.js"
 import { Layout } from "@pixi/layout"
 import { Button } from "@pixi/ui"
 import { navigation } from "../navigation.js"
@@ -7,40 +7,42 @@ import GameScore from "../ui/GameScore.js"
 import Match3 from "../match3/Match3.js"
 
 class GameScreen extends Layout {
-	constructor() {
-		super({
-			styles: {
-				opacity: 0
-			}
-		})
+	isFinished = false
 
-		this.gameScore = new GameScore()
+	/** @type { GameScore } */
+	gameScore
+
+	constructor() {
+		super()
+
+		// this.gameScore = new GameScore()
+		this.match3 = new Match3()
+	}
+
+	async prepare() {
+		await Assets.loadBundle([ 'game', 'common' ])
+
+		this.isFinished = false
+
+        this.match3.setup()
 
 		this.addContent({
-			// game: {
-			// 	match3: {
-
-			// 	}
-			// },
-			score: {
-				content: this.gameScore
-			},
-			// timer: {
-			// 	content: // timer
-			// },
+			content: this.match3,
+			styles: {
+				position: 'center',
+				anchor: 0
+			}
 		})
-
-		const match3 = this.match3 = new Match3()
-
-		this.addChild(match3)
 	}
 
 	async show() {
-		await animate(this, {
-			alpha: 1,
-			duration: 500,
-			ease: 'linear'
-		}).then()
+		// await animate(this, {
+		// 	alpha: 1,
+		// 	duration: 500,
+		// 	ease: 'linear'
+		// }).then()
+
+		this.match3.startPlaying()
 	}
 }
 
