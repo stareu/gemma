@@ -2,6 +2,7 @@ import { Container, Graphics } from "pixi.js"
 import { match3GetBlocks } from "./Match3Config.js"
 import { match3CreateGrid, match3ForEach } from "./Match3Utility.js"
 import { pool } from "../utils/pool.js"
+import Match3Piece from "./Match3Piece.js"
 
 class Match3Board {
 	match3
@@ -66,6 +67,8 @@ class Match3Board {
 		match3ForEach(this.grid, (gridPosition, type) => {
             this.createPiece(gridPosition, type)
         })
+
+		// todo: где гарантия, что можно сделать ряд?
 	}
 
 	// Создание ячеек поля (здесь это piece)
