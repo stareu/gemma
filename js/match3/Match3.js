@@ -1,4 +1,4 @@
-import { Container, Sprite, Text, Texture } from "pixi.js"
+import { Container } from "pixi.js"
 import { match3GetConfig } from "./Match3Config"
 import Match3Timer from "./Match3Timer.js"
 import Match3Stats from "./Match3Stats.js"
@@ -12,6 +12,7 @@ class Match3 extends Container {
 		this.timer = new Match3Timer()
 		this.stats = new Match3Stats()
 		this.board = new Match3Board(this)
+		this.actions
 	}
 
 	setup() {

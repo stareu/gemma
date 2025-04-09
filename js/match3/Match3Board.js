@@ -1,6 +1,6 @@
 import { Container, Graphics } from "pixi.js"
 import { match3GetBlocks } from "./Match3Config.js"
-import { match3CreateGrid, match3ForEach } from "./Match3Utility.js"
+import { match3CreateGrid, match3ForEach, match3GetPieceType, match3SetPieceType } from "./Match3Utility.js"
 import { pool } from "../utils/pool.js"
 import Match3Piece from "./Match3Piece.js"
 

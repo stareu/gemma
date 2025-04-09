@@ -27,6 +27,14 @@ export function match3CreateGrid(rows = 6, columns = 6, types) {
     return grid
 }
 
+export function match3CloneGrid(grid) {
+    const clone = [];
+    for (const row of grid) {
+        clone.push(row.slice());
+    }
+    return clone;
+}
+
 export function match3GetRandomType(types, exclude) {
     let list = types.concat()
 
@@ -69,4 +77,230 @@ export function match3SetPieceType(grid, position, type) {
 
 export function match3GetPieceType(grid, position) {
     return grid?.[position.row]?.[position.column]
+}
+
+export function match3SwapPieces(grid, positionA, positionB) {
+    const typeA = match3GetPieceType(grid, positionA)
+    const typeB = match3GetPieceType(grid, positionB)
+
+    // Only swap pieces if both types are valid (not undefined)
+    if (typeA !== undefined && typeB !== undefined) {
+        match3SetPieceType(grid, positionA, typeB)
+        match3SetPieceType(grid, positionB, typeA)
+    }
+}
+
+function match3GetMatchesByOrientation(grid, matchSize, orientation) {
+    const matches = [];
+    const rows = grid.length;
+    const columns = grid[0].length;
+    let lastType = undefined;
+    let currentMatch = [];
+
+    // Define primary and secondary orientations for the loop
+    const primary = orientation === 'horizontal' ? rows : columns;
+    const secondary = orientation === 'horizontal' ? columns : rows;
+
+    for (let p = 0; p < primary; p++) {
+        for (let s = 0; s < secondary; s++) {
+            // On horizontal 'p' is row and 's' is column, vertical is opposite
+            const row = orientation === 'horizontal' ? p : s;
+            const column = orientation === 'horizontal' ? s : p;
+            const type = grid[row][column];
+
+            if (type && type === lastType) {
+                // Type is the same as the last type, append to the match list
+                currentMatch.push({ row, column });
+            } else {
+                // Type is different from last - check current match length and append it to the results if suitable
+                if (currentMatch.length >= matchSize) {
+                    matches.push(currentMatch);
+                }
+                // Start a new match
+                currentMatch = [{ row, column }];
+                // Save last type to check in the next pass
+                lastType = type;
+            }
+        }
+
+        // Row (or column) finished. Append current match if suitable
+        if (currentMatch.length >= matchSize) {
+            matches.push(currentMatch);
+        }
+
+        // Cleanup before mmoving to the next row (or column)
+        lastType = undefined;
+        currentMatch = [];
+    }
+
+    return matches;
+}
+
+export function match3ComparePositions(a, b) {
+	// todo: почему разные операторы сравнения?
+    return a.row === b.row && a.column == b.column;
+}
+
+export function match3IncludesPosition(positions, position) {
+    for (const p of positions) {
+        if (match3ComparePositions(p, position)) {
+			return true
+		}
+    }
+
+    return false;
+}
+
+export function match3GetMatches(grid, filter, matchSize = 3) {
+    const allMatches = [
+        ...match3GetMatchesByOrientation(grid, matchSize, 'horizontal'),
+        ...match3GetMatchesByOrientation(grid, matchSize, 'vertical')
+    ]
+
+    if (!filter) {
+        // Return all matches found if filter is not provided
+        return allMatches;
+    }
+
+    // List of matches that involves positions in the provided filter
+    const filteredMatches = [];
+
+    for (const match of allMatches) {
+        let valid = false;
+        for (const position of match) {
+            // Compare each position of the match to see if includes one of the filter positions
+            for (const filterPosition of filter) {
+                const same = match3ComparePositions(position, filterPosition);
+                if (same) valid = true;
+            }
+        }
+
+        if (valid) {
+            // If match is valid (contains one of the filter positions), append that to the filtered list
+            filteredMatches.push(match);
+        }
+    }
+
+    return filteredMatches;
+}
+
+export function match3IsValidPosition(grid, position) {
+    const rows = grid.length;
+    const cols = grid[0].length;
+
+    return position.row >= 0 && position.row < rows && position.column >= 0 && position.column < cols;
+}
+
+export function match3ApplyGravity(grid) {
+    const rows = grid.length;
+    const columns = grid[0].length;
+    const changes = [];
+
+    for (let r = rows - 1; r >= 0; r--) {
+        for (let c = 0; c < columns; c++) {
+            let position = { row: r, column: c };
+            const belowPosition = { row: r + 1, column: c };
+            let hasChanged = false;
+
+            // Skip this one if position below is out of bounds
+            if (!match3IsValidPosition(grid, belowPosition)) continue;
+
+            // Retrive ethe type of the position below
+            let belowType = match3GetPieceType(grid, belowPosition);
+
+            // Keep moving the piece down if position below is valid and empty
+            while (match3IsValidPosition(grid, belowPosition) && belowType === 0) {
+                hasChanged = true;
+                match3SwapPieces(grid, position, belowPosition);
+                position = { ...belowPosition };
+                belowPosition.row += 1;
+                belowType = match3GetPieceType(grid, belowPosition);
+            }
+
+            if (hasChanged) {
+                // Append a new change if position has changed [<from>, <to>]
+                changes.push([{ row: r, column: c }, position]);
+            }
+        }
+    }
+
+    return changes;
+}
+
+export function match3GetEmptyPositions(grid) {
+    const positions = [];
+    const rows = grid.length;
+    const columns = grid[0].length;
+
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            if (!grid[r][c]) {
+                positions.push({ row: r, column: c });
+            }
+        }
+    }
+
+    return positions;
+}
+
+export function match3GridToString(grid) {
+    const lines = [];
+
+    for (const row of grid) {
+        const list = row.map((type) => String(type).padStart(2, '0'));
+        lines.push('|' + list.join('|') + '|');
+    }
+
+    return lines.join('\n');
+}
+
+export function match3FillUp(grid, types) {
+    // Create a temp grid that will provide pieces to fill up corresponding slots
+    // using the same grid creation algorithm to avoid pre-made combinations
+    const tempGrid = match3CreateGrid(grid.length, grid[0].length, types);
+
+    const rows = grid.length;
+    const columns = grid[0].length;
+    const newPositions = [];
+
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            if (!grid[r][c]) {
+                grid[r][c] = tempGrid[r][c];
+                newPositions.push({ row: r, column: c });
+            }
+        }
+    }
+
+    return newPositions.reverse();
+}
+
+export function match3FilterUniquePositions(positions) {
+	// todo: wtf? зачем два массива, когда достаточно одного
+    const result = [];
+    const register = [];
+
+    for (const position of positions) {
+        const id = position.row + ':' + position.column;
+
+        if (!register.includes(id)) {
+            register.push(id);
+            result.push(position);
+        }
+    }
+
+    return result;
+}
+
+export function match3PositionToString(position) {
+    return position.row + ':' + position.column;
+}
+
+export function match3StringToPosition(str) {
+    const split = str.split(':');
+
+    return {
+		row: Number(split[0]),
+		column: Number(split[1])
+	};
 }

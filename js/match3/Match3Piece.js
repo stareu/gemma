@@ -144,23 +144,21 @@ class Match3Piece extends Container {
 				if (moveX < 0) {
 					// Move left
 					to.column -= 1
-					this.onMove?.(from, to)
 				} else {
 					// Move right
 					to.column += 1
-					this.onMove?.(from, to)
 				}
 			} else {
 				if (moveY < 0) {
 					// Move up
 					to.row -= 1
-					this.onMove?.(from, to)
 				} else {
 					// Move down
 					to.row += 1
-					this.onMove?.(from, to)
 				}
 			}
+
+			this.onMove?.(from, to)
 
 			// Сразу "отпускаем" нажатие мыши, ведь смещаем всего один элемент, дальше нам не надо
 			this.onPointerUp()
@@ -209,12 +207,12 @@ class Match3Piece extends Container {
 
 		const duration = 0.2
 
-		await gsap.to(this, {
-			x,
-			y,
-			duration,
-			ease: 'quad.out'
-		})
+		// await gsap.to(this, {
+		// 	x,
+		// 	y,
+		// 	duration,
+		// 	ease: 'quad.out'
+		// })
 
 		this.unlock()
 	}
@@ -226,12 +224,12 @@ class Match3Piece extends Container {
 
 		const duration = 0.5
 
-		await gsap.to(this.position, {
-			x,
-			y,
-			duration,
-			ease: easeSingleBounce
-		})
+		// await gsap.to(this.position, {
+		// 	x,
+		// 	y,
+		// 	duration,
+		// 	ease: easeSingleBounce
+		// })
 
 		this.unlock()
 	}
@@ -262,12 +260,12 @@ class Match3Piece extends Container {
 
 		const duration = 0.2
 
-		gsap.to(this.scale, {
-			x: 1,
-			y: 1,
-			duration,
-			ease: 'back.out'
-		})
+		// gsap.to(this.scale, {
+		// 	x: 1,
+		// 	y: 1,
+		// 	duration,
+		// 	ease: 'back.out'
+		// })
 
 		this.unlock()
 	}

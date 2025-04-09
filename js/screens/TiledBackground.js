@@ -13,7 +13,7 @@ export class TiledBackground extends Container {
 
 		this.addChild(this._sprite)
 
-		this.onRender = ((a, b) => {
+		this.onRender = (() => {
 			const delta = pixiApp.ticker.deltaTime
 
 			this._sprite.tilePosition.x -= 1 * delta
