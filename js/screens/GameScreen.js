@@ -44,6 +44,31 @@ class GameScreen extends Layout {
 
 		this.match3.startPlaying()
 	}
+
+    _onTimesUp() {
+        this.pauseButton.hide()
+
+        this.match3.stopPlaying()
+
+        // Only finishes the game if match 3 is not auto-processing the grid
+        if (!this.match3.process.isProcessing) {
+			this.finish()
+		}
+    }
+
+    async finish() {
+        if (!this.isFinished) {
+			this.isFinished = true
+
+			this.match3.stopPlaying()
+
+			// const performance = this.match3.stats.getGameplayPerformance()
+
+			// userStats.save(this.match3.config.mode, performance)
+
+			// navigation.showScreen(ResultScreen)
+		}
+    }
 }
 
 export default GameScreen

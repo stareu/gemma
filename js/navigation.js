@@ -59,15 +59,6 @@ class Navigation {
 
 		this.layout.addContent(screen)
 
-		// this.layout.addContent({
-		// 	content: screen,
-		// 	styles: {
-		// 		position: 'leftTop',
-		// 		width: '100%',
-		// 		height: '100%'
-		// 	}
-		// })
-
 		if (screen.prepare) {
 			await screen.prepare()
 		}
