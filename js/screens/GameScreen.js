@@ -5,10 +5,9 @@ import { navigation } from "../navigation.js"
 import { animate } from "animejs"
 import GameScore from "../ui/GameScore.js"
 import Match3 from "../match3/Match3.js"
+import dayjs from "dayjs"
 
 class GameScreen extends Layout {
-	isFinished = false
-
 	/** @type { GameScore } */
 	gameScore
 
@@ -22,15 +21,20 @@ class GameScreen extends Layout {
 	async prepare() {
 		await Assets.loadBundle([ 'game', 'common' ])
 
-		this.isFinished = false
-
         this.match3.setup()
 
+		this.timer = new Text({ text: '0' })
+
 		this.addContent({
-			content: this.match3,
-			styles: {
-				position: 'center',
-				anchor: 0
+			match3: {
+				content: this.match3,
+				styles: {
+					position: 'center',
+					anchor: 0
+				}
+			},
+			timer: {
+				content: this.timer,
 			}
 		})
 	}
@@ -43,6 +47,10 @@ class GameScreen extends Layout {
 		// }).then()
 
 		this.match3.startPlaying()
+
+		this.match3._endTimer.on('tick', () => {
+			this.timer.text = dayjs.duration(this.match3._endTimer.leftTime).format('HH:mm:ss')
+		})
 	}
 
     _onTimesUp() {
@@ -53,20 +61,6 @@ class GameScreen extends Layout {
         // Only finishes the game if match 3 is not auto-processing the grid
         if (!this.match3.process.isProcessing) {
 			this.finish()
-		}
-    }
-
-    async finish() {
-        if (!this.isFinished) {
-			this.isFinished = true
-
-			this.match3.stopPlaying()
-
-			// const performance = this.match3.stats.getGameplayPerformance()
-
-			// userStats.save(this.match3.config.mode, performance)
-
-			// navigation.showScreen(ResultScreen)
 		}
     }
 }

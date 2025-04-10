@@ -1,4 +1,4 @@
-import { Container, Graphics } from "pixi.js"
+import { Container } from "pixi.js"
 import { match3GetBlocks } from "./Match3Config.js"
 import { match3CreateGrid, match3ForEach, match3GetPieceType, match3SetPieceType } from "./Match3Utility.js"
 import { pool } from "../utils/pool.js"
@@ -39,16 +39,11 @@ class Match3Board {
 		this.columns = config.columns
 		this.tileSize = config.tileSize
 
-		// this.piecesMask.width = this.getWidth()
-        // this.piecesMask.height = this.getHeight()
-
-        this.piecesContainer.visible = true
+		this.typesMap = {}
+		this.commonTypes = []
 
 		const blocks = match3GetBlocks(config.mode)
 		const special = this.match3.special
-
-		this.typesMap = {}
-		this.commonTypes = []
 
 		blocks.forEach((blockName, blockIndex) => {
 			const blockType = blockIndex + 1

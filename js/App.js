@@ -1,14 +1,17 @@
 import { Application, Sprite, Assets, Texture, Container, Spritesheet, Graphics, Color } from 'pixi.js'
-import { Layout } from '@pixi/layout'
 import { navigation } from './navigation.js'
 import LoadScreen from './screens/LoadScreen.js'
 import HomeScreen from './screens/HomeScreen.js'
 import { TiledBackground } from './screens/TiledBackground.js'
 import { Events } from './events/Events.js'
-import SettingsPopup from './popups/SettingsPopup.js'
+
+import dayjs from 'dayjs'
+import duration from 'dayjs/plugin/duration' // ES 2015
 
 import * as _ from 'radashi'
 import { engine } from 'animejs'
+
+dayjs.extend(duration)
 
 globalThis._ = _
 
@@ -16,6 +19,8 @@ engine.useDefaultMainLoop = false
 
 export const pixiApp = new Application()
 
+
+// todo: в package.json перенести зависимости из дев в обычные
 class App {
 	/** @type { Application } */
 	pixiApp
@@ -25,7 +30,7 @@ class App {
 
 		pixiApp.ticker.add(() => engine.update())
 
-		this._initResize()
+		this._initEvents()
 
 		await this._initAssets()
 
@@ -50,6 +55,10 @@ class App {
 		})
 
 		document.body.appendChild(app.canvas)
+	}
+
+	_initEvents() {
+		this._initResize()
 	}
 
 	_initResize() {
