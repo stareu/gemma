@@ -14,7 +14,7 @@ const defaultConfig = {
     columns: 7,
     tileSize: 90,
     freeMoves: false,
-    duration: 20,
+    duration: 2000e3,
     mode: 'hard',
 };
 

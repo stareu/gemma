@@ -1,37 +1,30 @@
 import { Container } from "pixi.js"
 import { match3GetBlocks } from "./Match3Config.js"
-import { match3CreateGrid, match3ForEach, match3GetPieceType, match3SetPieceType } from "./Match3Utility.js"
 import { pool } from "../utils/pool.js"
-import Match3Piece from "./Match3Piece.js"
+import Match3Cell from "./Match3Cell.js"
+import BoardGrid from "./BoardGrid.js"
 
 class Match3Board {
 	match3
 
-	pieces = []
-	piecesContainer
-	piecesMask
+	cells = []
+	cellsContainer
 
 	rows
 	columns
 	tileSize
 
-	typesMap
-	commonTypes
+	/** Все типы ячеек */
+	cellTypes
 
+	/** @type { BoardGrid } */
 	grid
 
 	constructor(match3) {
         this.match3 = match3
 
-        this.piecesContainer = new Container()
-        this.match3.addChild(this.piecesContainer)
-
-        // this.piecesMask = new Graphics()
-		// 	.rect(-2, -2, 4, 4)
-		// 	.fill({ color: 0xff0000, alpha: 0.5 })
-
-        // this.match3.addChild(this.piecesMask)
-        // this.piecesContainer.mask = this.piecesMask
+        this.cellsContainer = new Container()
+        this.match3.addChild(this.cellsContainer)
 	}
 
 	setup(config) {
@@ -39,136 +32,123 @@ class Match3Board {
 		this.columns = config.columns
 		this.tileSize = config.tileSize
 
-		this.typesMap = {}
-		this.commonTypes = []
-
 		const blocks = match3GetBlocks(config.mode)
-		const special = this.match3.special
+
+		this.cellTypes = {}
 
 		blocks.forEach((blockName, blockIndex) => {
 			const blockType = blockIndex + 1
 
-			if (special.isSpecialAvailable(blockName)) {
-                special.addSpecialHandler(blockName, blockType)
-            } else {
-                this.commonTypes.push(blockType)
-            }
-
-            this.typesMap[blockType] = blockName
+            this.cellTypes[blockType] = blockName
 		})
 
-		this.grid = match3CreateGrid(this.rows, this.columns, this.commonTypes)
+		// todo: exclude specials
 
-		match3ForEach(this.grid, (gridPosition, type) => {
-            this.createPiece(gridPosition, type)
-        })
-	}
+		// Только обычные типы ячеек (без specials или других)
+		const cellCommonTypes = Object.keys(this.cellTypes)
 
-	// Создание ячеек поля (здесь это piece)
-	createPiece(position, pieceType) {
-        const name = this.typesMap[pieceType]
-        const piece = pool.get(Match3Piece)
-        const viewPosition = this.getViewPositionByGridPosition(position)
+		this.grid = new BoardGrid(this.rows, this.columns, cellCommonTypes)
 
 		const actions = this.match3.actions
-		const actionMove = actions.actionMove.bind(actions)
-		const actionTap = actions.actionTap.bind(actions)
 
-		piece.onMove = actionMove
-        piece.onTap = actionTap
+		this._actionMove = actions.actionMove.bind(actions)
+		this._actionTap = actions.actionTap.bind(actions)
 
-		piece.setup({
+		const createCell = this.createCell.bind(this)
+
+		this.grid.forEach(createCell)
+	}
+
+	// Создание ячеек поля (здесь это cell)
+	createCell(row, column, cellType) {
+        const name = this.cellTypes[cellType]
+        const cell = pool.get(Match3Cell)
+
+		// todo: мб сделать один обработчик
+		cell.on('move', this._actionMove)
+        cell.on('tap', this._actionTap)
+
+		cell.setup({
             name,
-            type: pieceType,
-            size: this.match3.config.tileSize,
+			row,
+			column,
+            type: cellType,
+            tileSize: this.tileSize,
             interactive: true,
-            highlight: this.match3.special.isSpecial(pieceType),
+            // highlight: this.match3.special.isSpecial(cellType),
         })
 
-        piece.row = position.row
-        piece.column = position.column
-        piece.x = viewPosition.x
-        piece.y = viewPosition.y
+		this.cells.push(cell)
+        this.cellsContainer.addChild(cell)
 
-		this.pieces.push(piece)
-        this.piecesContainer.addChild(piece)
-
-		return piece
+		return cell
 	}
 
 	async spawnPiece(position, pieceType) {
-        const oldPiece = this.getPieceByPosition(position)
+        // const oldPiece = this.getPieceByPosition(position)
 
-        if (oldPiece) {
-			this.disposePiece(oldPiece)
-		}
+        // if (oldPiece) {
+		// 	this.disposePiece(oldPiece)
+		// }
 
-        match3SetPieceType(this.grid, position, pieceType)
+        // match3SetPieceType(this.grid, position, pieceType)
 
-        if (!pieceType) {
-			return
-		}
+        // if (!pieceType) {
+		// 	return
+		// }
 
-        const piece = this.createPiece(position, pieceType)
+        // const piece = this.createCell(position, pieceType)
 
-        await piece.animateSpawn()
+        // await piece.animateSpawn()
     }
 
-	async popPiece(position, causedBySpecial = false) {
-        const piece = this.getPieceByPosition(position)
-        const type = match3GetPieceType(this.grid, position)
+	// Скрытие ячейки
+	async popCell(position, causedBySpecial = false) {
+        const cell = this.getCellByPosition(position)
 
-        if (!type || !piece) {
+        if (!cell.type || !cell) {
 			return
 		}
 
-        const isSpecial = this.match3.special.isSpecial(type)
+        const isSpecial = this.match3.special.isSpecial(cell.type)
         const combo = this.match3.process.round
 
-        match3SetPieceType(this.grid, position, 0)
+		this.grid.set(cell.row, cell.column, 0)
 
-        const popData = { piece, type, combo, isSpecial, causedBySpecial }
+        const popData = {
+			cell,
+			type: cell.type,
+			combo,
+			isSpecial,
+			causedBySpecial
+		}
 
         this.match3.stats.registerPop(popData)
         this.match3.onPop?.(popData)
 
-        if (this.pieces.includes(piece)) {
-            this.pieces.splice(this.pieces.indexOf(piece), 1);
+        if (this.cells.includes(cell)) {
+            this.cells.splice(this.cells.indexOf(cell), 1);
         }
 
-        await piece.animatePop()
+        await cell.animatePop()
 
-        this.disposePiece(piece)
+        this.disposeCell(cell)
 
-        await this.match3.special.trigger(type, position)
+        // await this.match3.special.trigger(type, position)
     }
 
-	async popPieces(positions, causedBySpecial = false) {
+	async popCells(positions, causedBySpecial = false) {
         const animPromises = []
 
         for (const position of positions) {
-            animPromises.push(this.popPiece(position, causedBySpecial))
+            animPromises.push(this.popCell(position, causedBySpecial))
         }
 
         await Promise.all(animPromises)
     }
 
-	getPieceByPosition(position) {
-		return this.pieces.find(piece => piece.row === position.row && piece.column === position.column)
-    }
-
-	// Получаем x, y позиции, только хз зачем offset'ы
-	getViewPositionByGridPosition(position) {
-		const offsetX = ((this.columns - 1) * this.tileSize) / 2
-		const offsetY = ((this.rows - 1) * this.tileSize) / 2
-		const x = position.column * this.tileSize - offsetX
-		const y = position.row * this.tileSize - offsetY
-
-		return { x, y }
-	}
-
-	getTypeByPosition(position) {
-        return match3GetPieceType(this.grid, position)
+	getCellByPosition(row, column) {
+		return this.cells.find(cell => cell.row === row && cell.column === column)
     }
 
 	getWidth() {
@@ -180,38 +160,59 @@ class Match3Board {
     }
 	
     pause() {
-		this.pieces.forEach(piece => piece.pause())
+		this.cells.forEach(cell => cell.pause())
     }
 
     resume() {
-		this.pieces.forEach(piece => piece.resume())
+		this.cells.forEach(cell => cell.resume())
     }
 
-    bringToFront(piece) {
-        this.piecesContainer.addChild(piece)
+    bringToFront(cell) {
+        this.cellsContainer.addChild(cell)
     }
 
     reset() {
-        let i = this.pieces.length
+		this.cells.forEach(cell => {
+			this.disposeCell(cell)
+		})
 
-        while (i--) {
-            const piece = this.pieces[i]
-            this.disposePiece(piece);
-        }
-
-        this.pieces.length = 0
+        this.cells.length = 0
     }
 
-	disposePiece(piece) {
-        if (this.pieces.includes(piece)) {
-            this.pieces.splice(this.pieces.indexOf(piece), 1);
+	fillUpNewCells() {
+		const grid = this.grid
+		const rows = grid.length
+		const columns = grid[0].length
+		const newCells = []
+
+		// Создаём временный grid с рандомным заполнением
+		// И для оригинальной grid заполняем пустые ячейки
+		// mb todo: здесь нет гарантии, что при заполнении будут match'и
+		const tempGrid = this._createGrid(rows, columns, this.grid.types)
+	
+		for (let r = 0; r < rows; r++) {
+			for (let c = 0; c < columns; c++) {
+				if (!grid[r][c]) {
+					grid[r][c] = tempGrid[r][c]
+
+					newCells.push(this.getCellByPosition(r, c))
+				}
+			}
+		}
+	
+		return newCells.reverse()
+	}
+
+	disposeCell(cell) {
+        if (this.cells.includes(cell)) {
+            this.cells.splice(this.cells.indexOf(cell), 1);
         }
 
-        if (piece.parent) {
-            piece.parent.removeChild(piece);
+        if (cell.parent) {
+            cell.parent.removeChild(cell);
         }
 
-        pool.giveBack(piece);
+        pool.giveBack(cell);
     }
 }
 

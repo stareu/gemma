@@ -1,5 +1,3 @@
-import { match3SwapPieces, match3GetPieceType, match3GetMatches, match3CloneGrid } from "./Match3Utility.js"
-
 class Match3Actions {
 	match3
 	isFreeMoves
@@ -12,132 +10,102 @@ class Match3Actions {
 		this.isFreeMoves = config.freeMoves
 	}
 
-	async actionMove(from, to) {
+	async actionMove(cell, rowTo, columnTo) {
 		if (this.match3.isPlaying()) {
 			const board = this.match3.board
 
-			const pieceA = board.getPieceByPosition(from)
-			const pieceB = board.getPieceByPosition(to)
+			const cellA = cell
+			const cellB = board.getCellByPosition(rowTo, columnTo)
 
-			if (!pieceA || !pieceB || pieceA.isLocked() || pieceB.isLocked()) {
-				return
+			// Ячейки есть и они не залочены и не пустые
+			if (cellA && cellB && !cellA.isLocked() && !cellB.isLocked() && !cellA.isEmpty() && !cellB.isEmpty()) {
+				await this.swapCells(cellA, cellB)
+
+				this.match3.process.start()
 			}
-
-			// wtf? если сюда пришли, то значит ячейки уже есть, зачем снова проверять, но только по типу?
-			const typeA = board.getTypeByPosition(from)
-			const typeB = board.getTypeByPosition(to)
-
-			if (!typeA || !typeB) {
-				return
-			}
-
-			console.log('[Match3] ACTION! Move:', from, 'to:', to)
-
-			await this.swapPieces(pieceA, pieceB)
-
-			this.match3.process.start()
 		}
 	}
 
-	async swapPieces(pieceA, pieceB) {
+	async swapCells(cellA, cellB) {
 		const board = this.match3.board
 
-        const positionA = pieceA.getGridPosition()
-        const positionB = pieceB.getGridPosition()
-
-        console.log('[Match3] Swap', positionA, positionB)
-
-        const viewPositionA = board.getViewPositionByGridPosition(positionA)
-        const viewPositionB = board.getViewPositionByGridPosition(positionB)
+        const positionA = cellA.position
+        const positionB = cellB.position
 
 		// Есть совпадения (ряд), иначе ячейка возвращается на своё место обратно
-        const valid = this.validateMove(positionA, positionB)
+        const isValidMove = this.validateMove(cellA, cellB)
 
-        this.match3.onMove?.({
-            from: positionA,
-            to: positionB,
-            valid,
-        })
+        if (isValidMove) {
+			board.swap(cellA, cellB)
 
-        if (valid) {
-            match3SwapPieces(board.grid, positionA, positionB)
+            cellA.row = positionB.row
+            cellA.column = positionB.column
 
-            pieceA.row = positionB.row
-            pieceA.column = positionB.column
-
-            pieceB.row = positionA.row
-            pieceB.column = positionA.column
+            cellB.row = positionA.row
+            cellB.column = positionA.column
         }
 
-        board.bringToFront(pieceA)
+        board.bringToFront(cellA)
 
         await Promise.all([
-            pieceA.animateSwap(viewPositionB.x, viewPositionB.y),
-            pieceB.animateSwap(viewPositionA.x, viewPositionA.y),
+            cellA.animateSwap(cellB.position),
+            cellB.animateSwap(cellA.position)
         ])
 
-        if (!valid) {
-            const viewPositionA = board.getViewPositionByGridPosition(positionA)
-            const viewPositionB = board.getViewPositionByGridPosition(positionB)
-
-            board.bringToFront(pieceB)
+        if (!isValidMove) {
+            board.bringToFront(cellB)
 
             await Promise.all([
-                pieceA.animateSwap(viewPositionA.x, viewPositionA.y),
-                pieceB.animateSwap(viewPositionB.x, viewPositionB.y),
+                cellA.animateSwap(cellB.position),
+                cellB.animateSwap(cellA.position)
             ])
-        } else if (this.match3.special.isSpecial(match3GetPieceType(board.grid, positionA))) {
-            await board.popPiece(positionA)
-        } else if (this.match3.special.isSpecial(match3GetPieceType(board.grid, positionB))) {
-            await board.popPiece(positionB)
         }
+		// else if (this.match3.special.isSpecial(match3GetPieceType(board.grid, positionA))) {
+        //     await board.popPiece(positionA)
+        // }
+		// else if (this.match3.special.isSpecial(match3GetPieceType(board.grid, positionB))) {
+        //     await board.popPiece(positionB)
+        // }
     }
 
-	validateMove(from, to) {
+	validateMove(cellA, cellB) {
         if (this.freeMoves) {
 			return true
 		}
 
 		const boardGrid = this.match3.board.grid
 
-        const type = match3GetPieceType(boardGrid, from)
-        const specialFrom = this.match3.special.isSpecial(type)
-        const specialTo = this.match3.special.isSpecial(match3GetPieceType(boardGrid, to))
+        // const type = cellA.type
+        // const specialFrom = this.match3.special.isSpecial(type)
+        // const specialTo = this.match3.special.isSpecial(match3GetPieceType(boardGrid, to))
 
-        if (specialFrom || specialTo) {
-			return true
+        // if (specialFrom || specialTo) {
+		// 	return true
+		// }
+
+		if (cellA.type !== undefined && cellB.type !== undefined) {
+			// todo: Клонируем, свайпаем и проверяем. Но вероятно можно и без клона
+			const newMatches = boardGrid
+				.clone()
+				.swap(cellA, cellB)
+				.getMatches([ cellA.position, cellB.position ])
+
+			// Если после свапа ячеек появились мэтчи в позициях cellA или cellB
+
+			return newMatches.length >= 1
 		}
-
-        // Clone current grid so we can manipulate it safely
-        const tempGrid = match3CloneGrid(boardGrid)
-
-        // Swap pieces in the temporary cloned grid
-        match3SwapPieces(tempGrid, from, to)
-
-        // Get all matches created by this move in the temporary grid
-        const newMatches = match3GetMatches(tempGrid, [from, to])
-
-        // Only validate moves that creates new matches
-        return newMatches.length >= 1
     }
 
-	async actionTap(position) {
+	async actionTap(cell) {
         if (this.match3.isPlaying()) {
 			const board = this.match3.board
 
-			const piece = board.getPieceByPosition(position)
-			const type = board.getTypeByPosition(position)
-
-			if (!piece || !this.match3.special.isSpecial(type) || piece.isLocked()) {
-				return
-			}
-
-			console.log('[Match3] ACTION! Tap:', position)
-
 			// Только special ячейки
-			await board.popPiece(piece)
+			if (cell && this.match3.special.isSpecial(cell.type) && !cell.isLocked()) {
+				await board.popPiece(cell)
 
-			this.match3.process.start()
+				this.match3.process.start()
+			}
 		}
     }
 }

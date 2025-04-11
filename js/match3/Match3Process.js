@@ -1,5 +1,5 @@
 import AsyncQueue from "../utils/AsyncQueue.js"
-import { match3GetMatches, match3GridToString, match3FillUp, match3GetPieceType, match3GetEmptyPositions, match3ApplyGravity } from "./Match3Utility.js"
+import {match3GridToString, match3ApplyGravity } from "./Match3Utility.js"
 
 class Match3Process {
 	queue
@@ -13,6 +13,11 @@ class Match3Process {
 	constructor(match3) {
 		this.match3 = match3
 		this.queue = new AsyncQueue()
+
+		const board = this.match3.board
+
+        this._boardGetMatches = board.grid.getMatches.bind(board.grid)
+		this._boardPopCells = board.popCells.bind(board)
 	}
 
 	reset() {
@@ -80,7 +85,7 @@ class Match3Process {
     }
 
 	async updateStats() {
-        const matches = match3GetMatches(this.match3.board.grid)
+        const matches = this._boardGetMatches()
 
         if (matches.length) {
 			console.log('[Match3] Update stats')
@@ -104,15 +109,12 @@ class Match3Process {
     async processRegularMatches() {
         console.log('[Match3] Process regular matches')
 
-		// Массив с подмассивами
-		// [
-		// 		[ {row, column}, {row, column} ... ], // match
-		// ]
-        const matches = match3GetMatches(this.match3.board.grid)
+        const matches = this._boardGetMatches()
+		const popCells = this._boardPopCells()
         const animPromises = []
 
         for (const match of matches) {
-            animPromises.push(this.match3.board.popPieces(match))
+            animPromises.push(popCells(match))
         }
 
         await Promise.all(animPromises)
@@ -128,11 +130,11 @@ class Match3Process {
         for (const change of changes) {
             const from = change[0]
             const to = change[1]
-            const piece = board.getPieceByPosition(from)
+            const cell = board.getCellByPosition(from)
 
-            if (piece) {
-				piece.row = to.row
-				piece.column = to.column
+            if (cell) {
+				cell.row = to.row
+				cell.column = to.column
 
 				const newPosition = board.getViewPositionByGridPosition(to)
 
@@ -145,50 +147,37 @@ class Match3Process {
 
     async refillGrid() {
 		const board = this.match3.board
-		const boardGrid = board.grid
-
-        const newPieces = match3FillUp(boardGrid, board.commonTypes)
-
-        console.log('[Match3] Refill grid - new pieces:', newPieces.length)
-
         const animPromises = []
         const piecesPerColumn = {}
-
 		const tileSize = this.match3.config.tileSize
+        const newCells = board.fillUpAndGetNewCells()
 
-        for (const position of newPieces) {
-            const pieceType = match3GetPieceType(boardGrid, position)
-            const piece = board.createPiece(position, pieceType)
-
+		newCells.forEach(cell => {
             // Count pieces per column so new pieces can be stacked up accordingly
-            if (!piecesPerColumn[piece.column]) {
-				piecesPerColumn[piece.column] = 0
+            if (!piecesPerColumn[cell.column]) {
+				piecesPerColumn[cell.column] = 0
 			}
 
-            piecesPerColumn[piece.column] += 1
+            piecesPerColumn[cell.column] += 1
 
-            const x = piece.x
-            const y = piece.y
-            const columnCount = piecesPerColumn[piece.column]
+            const x = cell.x
+            const y = cell.y
+            const columnCount = piecesPerColumn[cell.column]
             const height = board.getHeight()
 
-            piece.y = -height * 0.5 - columnCount * tileSize
+            cell.y = -height * 0.5 - columnCount * tileSize
 
-            animPromises.push(piece.animateFall(x, y))
-        }
+            animPromises.push(cell.animateFall(x, y))
+		})
 
         await Promise.all(animPromises)
     }
 
     async processCheckpoint() {
         // Check if there are any remaining matches or empty spots
-        const newMatches = match3GetMatches(this.match3.board.grid)
-        const emptySpaces = match3GetEmptyPositions(this.match3.board.grid)
+        const newMatches = this._boardGetMatches()
 
-        console.log('[Match3] Checkpoint - New matches:', newMatches.length)
-        console.log('[Match3] Checkpoint - Empty spaces:', emptySpaces.length)
-
-        if (newMatches.length || emptySpaces.length) {
+        if (newMatches.length || this.match3.board.grid.hasEmptyPositions()) {
             console.log('[Match3] Checkpoint - Another sequence run is needed')
             // Run it again if there are any new matches or empty spaces in the grid
             this.runProcessRound()

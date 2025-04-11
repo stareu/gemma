@@ -30,7 +30,6 @@ class GameScreen extends Layout {
 				content: this.match3,
 				styles: {
 					position: 'center',
-					anchor: 0
 				}
 			},
 			timer: {

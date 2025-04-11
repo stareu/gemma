@@ -13,7 +13,7 @@
             "bgm-game.mp3"
           ],
           "src": [
-            "common/bgm-game-K7Qt.ogg",
+            "common/bgm-game-u1pPVw.ogg",
             "common/bgm-game-IXGL8w.mp3"
           ],
           "data": {
@@ -28,7 +28,7 @@
             "bgm-main.mp3"
           ],
           "src": [
-            "common/bgm-main-S-dpnw.ogg",
+            "common/bgm-main-RjKk8Q.ogg",
             "common/bgm-main-al6Nhg.mp3"
           ],
           "data": {
@@ -92,8 +92,8 @@
             "sfx-bubble.wav"
           ],
           "src": [
-            "common/sfx-bubble-Gq8s1A.mp3",
-            "common/sfx-bubble-827W8w.ogg"
+            "common/sfx-bubble-ZfemaQ.ogg",
+            "common/sfx-bubble-Gq8s1A.mp3"
           ],
           "data": {
             "tags": {
@@ -107,8 +107,8 @@
             "sfx-correct.wav"
           ],
           "src": [
-            "common/sfx-correct-vDzaYw.ogg",
-            "common/sfx-correct-qAjYjg.mp3"
+            "common/sfx-correct-qAjYjg.mp3",
+            "common/sfx-correct-1Z23uw.ogg"
           ],
           "data": {
             "tags": {
@@ -122,7 +122,7 @@
             "sfx-countdown.wav"
           ],
           "src": [
-            "common/sfx-countdown-tLcpcw.ogg",
+            "common/sfx-countdown-lK7vmw.ogg",
             "common/sfx-countdown-eue6VQ.mp3"
           ],
           "data": {
@@ -138,7 +138,7 @@
           ],
           "src": [
             "common/sfx-hover-Ztp4.mp3",
-            "common/sfx-hover-tzIvxg.ogg"
+            "common/sfx-hover-YRdm2w.ogg"
           ],
           "data": {
             "tags": {
@@ -152,7 +152,7 @@
             "sfx-incorrect.wav"
           ],
           "src": [
-            "common/sfx-incorrect-d6DVzw.ogg",
+            "common/sfx-incorrect-zHx1DQ.ogg",
             "common/sfx-incorrect-7lfZww.mp3"
           ],
           "data": {
@@ -167,7 +167,7 @@
             "sfx-match.wav"
           ],
           "src": [
-            "common/sfx-match-JSbckQ.ogg",
+            "common/sfx-match-T9FGXg.ogg",
             "common/sfx-match-IS-g7Q.mp3"
           ],
           "data": {
@@ -183,7 +183,7 @@
           ],
           "src": [
             "common/sfx-points-kJ5GVA.mp3",
-            "common/sfx-points-itePxg.ogg"
+            "common/sfx-points-I3aLnA.ogg"
           ],
           "data": {
             "tags": {
@@ -197,8 +197,8 @@
             "sfx-press.wav"
           ],
           "src": [
-            "common/sfx-press-PLf25Q.mp3",
-            "common/sfx-press-jJbb.ogg"
+            "common/sfx-press-UViqJQ.ogg",
+            "common/sfx-press-PLf25Q.mp3"
           ],
           "data": {
             "tags": {
@@ -212,7 +212,7 @@
             "sfx-special.wav"
           ],
           "src": [
-            "common/sfx-special-PeuW8w.ogg",
+            "common/sfx-special-p4b3Ag.ogg",
             "common/sfx-special-hWkUvg.mp3"
           ],
           "data": {
