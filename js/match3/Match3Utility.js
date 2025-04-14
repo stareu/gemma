@@ -12,58 +12,6 @@ export function match3IncludesPosition(positions, position) {
     return false;
 }
 
-export function match3IsValidPosition(grid, position) {
-    const rows = grid.length;
-    const cols = grid[0].length;
-
-    return position.row >= 0 && position.row < rows && position.column >= 0 && position.column < cols;
-}
-
-export function match3ApplyGravity(grid) {
-    const rows = grid.length
-    const columns = grid[0].length
-    const changes = []
-
-    for (let r = rows - 1; r >= 0; r--) {
-        for (let c = 0; c < columns; c++) {
-            let position = { row: r, column: c }
-            const belowPosition = { row: r + 1, column: c }
-            let hasChanged = false
-
-            // Skip this one if position below is out of bounds
-            if (!match3IsValidPosition(grid, belowPosition)) {
-				continue
-			}
-
-            // Retrive the type of the position below
-            let belowType = match3GetPieceType(grid, belowPosition)
-
-            // Keep moving the piece down if position below is valid and empty
-            while (match3IsValidPosition(grid, belowPosition) && belowType === 0) {
-                hasChanged = true
-
-                match3SwapPieces(grid, position, belowPosition)
-
-                position = Object.assign({}, belowPosition)
-
-                belowPosition.row += 1
-
-                belowType = match3GetPieceType(grid, belowPosition)
-            }
-
-            if (hasChanged) {
-                // Append a new change if position has changed [<from>, <to>]
-                changes.push([
-					{ row: r, column: c },
-					position
-				])
-            }
-        }
-    }
-
-    return changes;
-}
-
 export function match3GridToString(grid) {
     const lines = [];
 

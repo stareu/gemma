@@ -90,10 +90,10 @@ class BoardGrid {
 			return this.grid[row][column]
 		}
 	}
-	
+
 	swap(cellA, cellB) {
-		this.set(cellA.position.x, cellA.position.y, cellB.type)
-		this.set(cellB.position.x, cellB.position.y, cellA.type)
+		this.set(cellA.row, cellA.column, cellB.type)
+		this.set(cellB.row, cellB.column, cellA.type)
 
 		return this
 	}

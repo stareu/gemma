@@ -61,7 +61,7 @@ class Match3Cell extends Container {
 	setup(options) {
 		const opts = Object.assign({}, defaultMatch3PieceOptions, options)
 
-		this.type = opts.type
+		this.type = Number(opts.type)
 		this.name = opts.name
 	
 		this.match3.config.tileSize
@@ -71,6 +71,8 @@ class Match3Cell extends Container {
 
 		this.row = opts.row
 		this.column = opts.column
+
+		this.tileSize = opts.tileSize
 
 		this.position = {
 			row: opts.row,

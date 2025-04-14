@@ -36,7 +36,7 @@ class Match3Actions {
         const isValidMove = this.validateMove(cellA, cellB)
 
         if (isValidMove) {
-			board.swap(cellA, cellB)
+			board.grid.swap(cellA, cellB)
 
             cellA.row = positionB.row
             cellA.column = positionB.column

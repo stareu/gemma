@@ -1,5 +1,5 @@
 import AsyncQueue from "../utils/AsyncQueue.js"
-import {match3GridToString, match3ApplyGravity } from "./Match3Utility.js"
+import { match3GridToString } from "./Match3Utility.js"
 
 class Match3Process {
 	queue
@@ -120,29 +120,8 @@ class Match3Process {
         await Promise.all(animPromises)
     }
 
-	async applyGravity() {
-		const board = this.match3.board
-        const changes = match3ApplyGravity(board.grid)
-        const animPromises = []
-
-        console.log('[Match3] Apply gravity - moved pieces:', changes.length)
-
-        for (const change of changes) {
-            const from = change[0]
-            const to = change[1]
-            const cell = board.getCellByPosition(from)
-
-            if (cell) {
-				cell.row = to.row
-				cell.column = to.column
-
-				const newPosition = board.getViewPositionByGridPosition(to)
-
-				animPromises.push(piece.animateFall(newPosition.x, newPosition.y))
-			}
-        }
-
-        await Promise.all(animPromises)
+	applyGravity() {
+        return this.match3.board.applyGravity()
     }
 
     async refillGrid() {
@@ -167,6 +146,7 @@ class Match3Process {
 
             cell.y = -height * 0.5 - columnCount * tileSize
 
+			// todo: animateFall как быть с x y
             animPromises.push(cell.animateFall(x, y))
 		})
 

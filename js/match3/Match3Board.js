@@ -32,7 +32,13 @@ class Match3Board {
 		this.columns = config.columns
 		this.tileSize = config.tileSize
 
-		const blocks = match3GetBlocks(config.mode)
+		this._createGrid()
+		this._createOftenUsedMethods()
+		this._createCells()
+	}
+
+	_createGrid() {
+		const blocks = match3GetBlocks(this.config.mode)
 
 		this.cellTypes = {}
 
@@ -48,12 +54,16 @@ class Match3Board {
 		const cellCommonTypes = Object.keys(this.cellTypes)
 
 		this.grid = new BoardGrid(this.rows, this.columns, cellCommonTypes)
+	}
 
+	_createOftenUsedMethods() {
 		const actions = this.match3.actions
 
 		this._actionMove = actions.actionMove.bind(actions)
 		this._actionTap = actions.actionTap.bind(actions)
+	}
 
+	_createCells() {
 		const createCell = this.createCell.bind(this)
 
 		this.grid.forEach(createCell)
@@ -105,8 +115,9 @@ class Match3Board {
 	// Скрытие ячейки
 	async popCell(position, causedBySpecial = false) {
         const cell = this.getCellByPosition(position)
+		const gridCellType = this.grid.get(position.row, position.column)
 
-        if (!cell.type || !cell) {
+        if (!gridCellType || !cell) {
 			return
 		}
 
@@ -203,16 +214,60 @@ class Match3Board {
 		return newCells.reverse()
 	}
 
+	applyGravity() {
+		const grid = this.grid
+		const rows = grid.length
+		const columns = grid[0].length
+		const animPromises = []
+	
+		const isValidPosition = position => {
+			return position.row >= 0 && position.row < rows && position.column >= 0 && position.column < columns
+		}
+
+		for (let r = rows - 1; r >= 0; r--) {
+			for (let c = 0; c < columns; c++) {
+				let cellA = this.getCellByPosition(r, c)
+				let cellBelowA = this.getCellByPosition(r + 1, c)
+				const gridCellType = grid.get(r, c)
+
+				let hasChanged = false
+	
+				if (!isValidPosition(cellBelowA.position)) {
+					continue
+				}
+	
+				while (isValidPosition(cellBelowA.position) && !gridCellType) {
+					hasChanged = true
+	
+					grid.swap(cellA, cellBelowA)
+
+					cellA = cellBelowA
+	
+					cellBelowA = this.getCellByPosition(cellBelowA.row + 1, cellBelowA.column)
+				}
+	
+				if (hasChanged) {
+					// startCell.row = cellA.row
+					// startCell.column = cellA.column
+
+					animPromises.push(startCell.animateFall())
+				}
+			}
+		}
+
+		return Promise.all(animPromises)
+	}
+
 	disposeCell(cell) {
         if (this.cells.includes(cell)) {
-            this.cells.splice(this.cells.indexOf(cell), 1);
+            this.cells.splice(this.cells.indexOf(cell), 1)
         }
 
         if (cell.parent) {
-            cell.parent.removeChild(cell);
+            cell.parent.removeChild(cell)
         }
 
-        pool.giveBack(cell);
+        pool.giveBack(cell)
     }
 }
 
