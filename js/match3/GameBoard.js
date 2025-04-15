@@ -16,6 +16,8 @@ class GameBoard extends Container {
 		this.columns = config.columns
 
 		this._createElements()
+
+		window.board = this
 	}
 
 	_createElements() {
@@ -83,12 +85,64 @@ class GameBoard extends Container {
 		}
 	}
 
+	getByRowCol(r, c) {
+		return this.grid[r] && this.grid[r][c]
+	}
+
 	findMatches() {
-		for (let r = 0; r < this.rows; r ++) {
-			for (let c = 0; c < this.columns; c ++) {
-				const element = this.grid[r][c]
+		let currentMatch
+
+		const matches = []
+		const grid = this.grid
+
+		const getMatches = (r, c, isVertical = false) => {
+			const element = grid[r][c]
+			const elementNameID = element.nameID
+
+			if (currentMatch && currentMatch[0].nameID === elementNameID) {
+				currentMatch.push(element)
+			}
+			else {
+				let next1Element
+				let next2Element
+
+				if (isVertical) {
+					next1Element = grid[r + 1] && grid[r + 1][c]
+					next2Element = grid[r + 2] && grid[r + 2][c]
+				}
+				else {
+					next1Element = grid[r][c + 1]
+					next2Element = grid[r][c + 2]
+				}
+
+				if (next1Element && next2Element && next1Element.nameID === elementNameID && next2Element.nameID === elementNameID) {
+					currentMatch = [ element ]
+
+					matches.push(currentMatch)
+				}
+				else {
+					currentMatch = null
+				}
 			}
 		}
+
+		for (let r = 0; r < this.rows; r ++) {
+			currentMatch = null
+
+			for (let c = 0; c < this.columns; c ++) {
+				getMatches(r, c)
+			}
+		}
+
+		for (let c = 0; c < this.columns; c ++) {
+			currentMatch = null
+
+			for (let r = 0; r < this.rows; r ++) {
+				getMatches(r, c, true)
+			}
+		}
+
+		return matches
 	}
 }
 

@@ -2,7 +2,7 @@ export default {
 	gameBoard: {
 		rows: 6,
 		columns: 4,
-		elementSize: 50,
+		elementSize: 70,
 		mode: 'normal',
 		elements: {
 			apple: {
