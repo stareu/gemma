@@ -1,4 +1,4 @@
-import { Application, Sprite, Assets, Texture, Container, Spritesheet, Graphics, Color } from 'pixi.js'
+import { Application, Assets } from 'pixi.js'
 import { navigation } from './navigation.js'
 import LoadScreen from './screens/LoadScreen.js'
 import HomeScreen from './screens/HomeScreen.js'
@@ -19,7 +19,6 @@ engine.useDefaultMainLoop = false
 
 export const pixiApp = new Application()
 
-
 // todo: в package.json перенести зависимости из дев в обычные
 class App {
 	/** @type { Application } */
@@ -27,6 +26,12 @@ class App {
 
 	async init() {
 		await this._initPixiApp()
+
+		Array.prototype.random = function() {
+			const index = Math.floor(Math.random() * this.length)
+		
+			return this[index]
+		}
 
 		pixiApp.ticker.add(() => engine.update())
 
