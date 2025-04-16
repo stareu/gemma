@@ -31,6 +31,9 @@ class Element extends Container {
 		this.y = config.size * this.row
 
 		this.addChild(this.image)
+
+		this.interactive = true
+		this.image.interactive = true
 	}
 }
 

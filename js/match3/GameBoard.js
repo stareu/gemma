@@ -10,6 +10,8 @@ class GameBoard extends Container {
 	constructor(config) {
 		super()
 
+		this.eventMode = 'dynamic'
+
 		this.config = config
 
 		this.rows = config.rows
@@ -27,8 +29,7 @@ class GameBoard extends Container {
 			const row = grid[r] = []
 
 			for (let c = 0; c < this.columns; c ++) {
-				const config = this._createElementConfig(r, c)
-				const element = new Element(config)
+				const element = this._createElement(r, c, true)
 
 				row.push(element)
 
@@ -37,7 +38,7 @@ class GameBoard extends Container {
 		}
 	}
 
-	_createElementConfig(row, column) {
+	_createElement(row, column, checkMatch = false) {
 		const grid = this.grid
 		const allowedElements = this.config.modes[this.config.mode]
 
@@ -58,16 +59,17 @@ class GameBoard extends Container {
 		const getRandomElement = () => {
 			let randomElement = allowedElements.random()
 
-			while (hasMatchesByRowOrColumn(randomElement)) {
-				randomElement = allowedElements.random()
+			if (checkMatch) {
+				while (hasMatchesByRowOrColumn(randomElement)) {
+					randomElement = allowedElements.random()
+				}
 			}
 
 			return randomElement
 		}
 
 		const name = getRandomElement()
-
-		return {
+		const elementConfig = {
 			name,
 			nameID: this.config.elements[name].id,
 			row,
@@ -75,18 +77,8 @@ class GameBoard extends Container {
 			size: this.config.elementSize,
 			image: name // todo: мб изменить ?
 		}
-	}
 
-	forEach(cb) {
-		for (let r = 0; r < this.rows; r ++) {
-			for (let c = 0; c < this.columns; c ++) {
-				cb(this.grid[r][c])
-			}
-		}
-	}
-
-	getByRowCol(r, c) {
-		return this.grid[r] && this.grid[r][c]
+		return new Element(elementConfig)
 	}
 
 	findMatches() {
@@ -143,6 +135,51 @@ class GameBoard extends Container {
 		}
 
 		return matches
+	}
+
+	removeMatches(matches) {
+		matches.forEach(match => {
+			match.forEach(element => {
+				this.grid[element.row][element.column] = null
+
+				element.destroy()
+			})
+		})
+	}
+
+	swapElements(el1, el2) {
+		this.grid[el1.row][el1.column] = el2
+		this.grid[el2.row][el2.column] = el1
+
+		const el1Row = el1.row
+		const el1Column = el1.column
+
+		el1.row = el2.row
+		el1.column = el2.column
+
+		el2.row = el1Row
+		el2.column = el1Column
+	}
+
+	fillEmpty() {
+		const grid = this.grid
+		const newElements = []
+
+		for (let r = 0; r < this.rows; r ++) {
+			for (let c = 0; c < this.columns; c ++) {
+				const element = grid[r][c]
+
+				if (!element) {
+					const element = this._createElement(r, c)
+
+					grid[r][c] = element
+
+					newElements.push(element)
+				}
+			}
+		}
+
+		return newElements
 	}
 }
 

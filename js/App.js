@@ -55,7 +55,14 @@ class App {
 
 		await app.init({
 			resolution: 1,
-			backgroundColor: '#ccc'
+			backgroundColor: '#ccc',
+			eventFeatures: {
+				move: true,
+				// /** disables the global move events which can be very expensive in large scenes */
+				// globalMove: false,
+				click: true,
+				wheel: false
+			}
 			// skipExtensionImports: true // кастомный импорт нужных модулей
 		})
 
