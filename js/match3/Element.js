@@ -16,6 +16,8 @@ class Element extends Container {
 	/** @type { Sprite } */
 	image
 
+	size
+
 	constructor(config) {
 		super()
 
@@ -27,6 +29,8 @@ class Element extends Container {
 		this.image = Sprite.from(config.image)
 		this.image.setSize(config.size)
 
+		this.size = config.size
+
 		this.x = config.size * this.column
 		this.y = config.size * this.row
 
@@ -34,6 +38,8 @@ class Element extends Container {
 
 		this.interactive = true
 		this.image.interactive = true
+
+		this.pivot.set(config.size / 2)
 	}
 }
 

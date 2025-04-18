@@ -1,31 +1,57 @@
 import GameBoard from "./GameBoard.js"
 import BoardTouchHandler from "./BoardTouchHandler.js"
+import AnimationManager from "./AnimationManager.js"
 import gameConfig from "./gameConfig.js"
-import { animate } from "animejs"
+import BoardProcessor from "./BoardProcessor.js"
 
 class GameManager {
+	/** @type { GameBoard } */
+	gameBoard
+	/** @type { BoardTouchHandler } */
+	boardTouch
+	/** @type { AnimationManager } */
+	animation
+	/** @type { BoardProcessor } */
+	boardProcessor
+
 	setup() {
 		this.gameBoard = new GameBoard(gameConfig.gameBoard)
+
+		this.animation = new AnimationManager()
+
+		this.boardProcessor = new BoardProcessor(this.gameBoard, this.animation)
+
 		this.boardTouch = new BoardTouchHandler(this.gameBoard)
+		this.boardTouch.on('swap', this._onSwapElements.bind(this))
 
-		this.boardTouch.on('swap', async (el1, el2) => {
-			this.gameBoard.swapElements(el1, el2)
+		window.gameManager = this
+	}
 
-			// Чтобы элемент всегда был выше второго
-			this.gameBoard.addChild(el1)
+	async _onSwapElements(el1, el2) {
+		const gameBoard = this.gameBoard
 
-			animate(el1.position, {
-				x: el2.position.x,
-				y: el2.position.y,
-				duration: 200
-			})
+		this.boardTouch.disable()
 
-			await animate(el2.position, {
-				x: el1.position.x,
-				y: el1.position.y,
-				duration: 200
-			}).then()
-		})
+		gameBoard.swapElements(el1, el2)
+
+		const matches = gameBoard.findMatches()
+
+		// Чтобы элемент всегда был выше второго
+		gameBoard.addChild(el1)
+		
+		if (matches.length) {
+			await this.animation.animateSwapElements(el1, el2)
+
+			await this.boardProcessor.process()
+		}
+		else {
+			gameBoard.swapElements(el2, el1)
+
+			await this.animation.animateSwapElements(el1, el2)
+			await this.animation.animateSwapElements(el2, el1)
+		}
+
+		this.boardTouch.enable()
 	}
 }
 

@@ -18,8 +18,6 @@ class GameBoard extends Container {
 		this.columns = config.columns
 
 		this._createElements()
-
-		window.board = this
 	}
 
 	_createElements() {
@@ -141,8 +139,6 @@ class GameBoard extends Container {
 		matches.forEach(match => {
 			match.forEach(element => {
 				this.grid[element.row][element.column] = null
-
-				element.destroy()
 			})
 		})
 	}
@@ -165,12 +161,14 @@ class GameBoard extends Container {
 		const grid = this.grid
 		const newElements = []
 
+		let element
+
 		for (let r = 0; r < this.rows; r ++) {
 			for (let c = 0; c < this.columns; c ++) {
-				const element = grid[r][c]
+				element = grid[r][c]
 
 				if (!element) {
-					const element = this._createElement(r, c)
+					element = this._createElement(r, c)
 
 					grid[r][c] = element
 
@@ -180,6 +178,38 @@ class GameBoard extends Container {
 		}
 
 		return newElements
+	}
+
+	applyGravity() {
+		const grid = this.grid
+		const changedElements = []
+		const cols = []
+		
+
+		for (let c = 0; c < this.columns; c ++) {
+			for (let r = 0; r < this.rows; r ++) {
+				cols[c] = cols[c] || []
+
+				cols[c].push(grid[r][c])
+			}
+		}
+
+		cols.forEach((col, columnID) => {
+			// Сначала null (то есть сверху, а элементы вниз)
+			col.sort(a => a ? 1 : -1)
+
+			col.forEach((element, rowID) => {
+				if (element && element.row !== rowID) {
+					element.row = rowID
+
+					changedElements.push(element)
+				}
+
+				grid[rowID][columnID] = element
+			})
+		})
+
+		return changedElements
 	}
 }
 
