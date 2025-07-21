@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "assets": "assetpack",
-    "start": "vite --open"
+    "start": "vite --open",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",

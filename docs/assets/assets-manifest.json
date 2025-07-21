@@ -1,0 +1,54 @@
+{
+  "bundles": [
+    {
+      "name": "default",
+      "assets": []
+    },
+    {
+      "name": "game",
+      "assets": [
+        {
+          "alias": [
+            "game/game-atlas",
+            "game-atlas"
+          ],
+          "src": [
+            "game/game-atlas-zryXzQ.webp.json",
+            "game/game-atlas-mjzinw.png.json",
+            "game/game-atlas-GTb-7w@0.5x.webp.json",
+            "game/game-atlas-4zIM-A@0.5x.png.json"
+          ],
+          "data": {
+            "tags": {
+              "m": true,
+              "tps": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "preload",
+      "assets": [
+        {
+          "alias": [
+            "preload/preload-atlas",
+            "preload-atlas"
+          ],
+          "src": [
+            "preload/preload-atlas-tBtMDQ.png.json",
+            "preload/preload-atlas-iElRfw.webp.json",
+            "preload/preload-atlas-4hCfFw@0.5x.png.json",
+            "preload/preload-atlas--LST@0.5x.webp.json"
+          ],
+          "data": {
+            "tags": {
+              "m": true,
+              "tps": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
