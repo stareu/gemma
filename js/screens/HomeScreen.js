@@ -17,7 +17,7 @@ class HomeScreen extends Layout {
 		})
 
 		const text = new Text({
-			text: 'Стартовать',
+			text: 'Начать',
 			style: {
 				fontSize: 35,
 				fill: '#fff',
